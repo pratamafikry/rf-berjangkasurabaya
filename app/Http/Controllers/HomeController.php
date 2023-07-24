@@ -94,4 +94,8 @@ class HomeController extends Controller
     {
         return view('alasan');
     }
+    public function loco()
+    {
+        return view('loco');
+    }
 }

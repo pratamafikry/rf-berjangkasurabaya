@@ -3,9 +3,9 @@
   <div class="container d-flex align-items-center justify-content-between">
 
     <div class="logo">
-      {{-- <h1><a href="/"><img src="/asset-home/img/navbar.png" alt=""></a></h1> --}}
+      <h1><a href="/"><img src="/asset-home/img/logo.png" alt=""></a></h1>
       <!-- Uncomment below if you prefer to use an image logo -->
-      <a href="/"><img src="/asset-home/img/logo.png" alt="" class="img-fluid"><span style="color: white;">Rifan Financindo Berjangka <strong>Ciputra World Surabaya</strong></span></a>
+      {{-- <a href="/"><img src="/asset-home/img/logo.png" alt="" class="img-fluid"><span style="color: white;">Rifan Financindo Berjangka <strong>Ciputra World Surabaya</strong></span></a> --}}
     </div>
 
     <nav id="navbar" class="navbar">
@@ -55,6 +55,15 @@
 
           </ul>
         </li>
+        <li class="dropdown"><a href="#edukasi"><span>Edukasi</span> <i class="bi bi-chevron-down"></i></a>
+          <ul>
+            <li><a href="/loco">Loco London Gold</a></li>
+            <li><a href="https://digitalmarketing.rf-berjangka.com/">Marketing Tools</a></li>
+            <li><a href="/petunjuk-transaksi">Simbol Index</a></li>
+
+          </ul>
+        </li>
+        
         <li><a class="nav-link scrollto" href="#news">Berita</a></li>
         <li><a class="nav-link scrollto" href="#invest">Mulai Invest</a></li>
         <li><a class="nav-link scrollto" href="#contact">Contact</a></li>

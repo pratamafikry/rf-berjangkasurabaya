@@ -50,6 +50,7 @@ Route::get('/legalitas-perusahaan', [HomeController::class, 'legalitas']);
 Route::get('/alasan-memilih-kami', [HomeController::class, 'alasan']);
 Route::get('/kelebihan', [HomeController::class, 'kelebihan']);
 Route::get('/ole', [HomeController::class, 'ole']);
+Route::get('/loco', [HomeController::class, 'loco']);
 Route::get('/about', [AboutController::class, 'about']);
 Route::get('/blog', [PostController::class, 'index']);
 Route::get('posts/{post:slug}', [PostController::class, 'show']);

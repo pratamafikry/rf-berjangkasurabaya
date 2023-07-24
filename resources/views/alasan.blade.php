@@ -1,0 +1,43 @@
+@extends('layout.main')
+@section('container')
+<main id="main">
+
+    <!-- ======= Breadcrumbs Section ======= -->
+    <section class="breadcrumbs">
+      <div class="container">
+
+        <div class="d-flex justify-content-between align-items-center">
+          <h2>Alasan Memilih Kami</h2>
+          <ol>
+            <li><a href="/">Home</a></li>
+            <li>Alasan Memilih Kami</li>
+          </ol>
+        </div>
+
+      </div>
+    </section><!-- End Breadcrumbs Section -->
+
+    <section class="inner-page">
+      <div class="container">
+        <div itemprop="articleBody">
+          <p style="line-height: 22px; color: #797979; font-family: 'Open Sans', sans-serif; font-size: 13px; text-align: justify;">Rifan Financindo Berjangka, merupakan perusahaan keuangan yang sangat terpercaya, hal ini di awali dengan adanya pengakuan dari anggota bursa, yang menyerahkan surat persetujuan anggota bursa atau di singkat dengan SPAB, yang isinya mengatakan bahwa “Rifan Financindo Berjangka ini telah resmi menjadi anggota Bursa Berjangka Jakarta”. Selain dari sertifikasi yang diberikan oleh anggota bursa untuk PT. Rifan Financindo Berjangka, perusahaan keuangan ini juga telah mendapatkan legalitas yang tentunya akan memberikan peningkatan keamanan untuk para nasabah dan calon nasabah nya (para investor).&nbsp;</p>
+      <p style="line-height: 22px; color: #797979; font-family: 'Open Sans', sans-serif; font-size: 13px; text-align: justify;">Hal hal yang menjadi alasan mengapa harus memilih melakukan&nbsp;<span class="mytool"><a href="https://www.sg-berjangka.com/index.php/id/edukasi/glosarium/116-investasi" style="background-image: initial; background-position: initial; background-repeat: initial; background-attachment: initial; color: #444e67; outline: none; border-bottom: 1px dashed;">investasi</a></span>&nbsp;di PT. Rifan Financindo Berjangka ialah sebagai berikut :</p>
+      <p style="line-height: 22px; color: #797979; font-family: 'Open Sans', sans-serif; font-size: 13px; text-align: justify;"><span id="result_box" lang="id" style="color: #000000;"><span title="1. Legality"><strong>1 . Legalitas</strong></span></span></p>
+      <p style="text-align: justify;"><span title="Entirety transaction of our index product (futures contract of Hong Kong and Japan Stocks Index) noted in Jakarta Futures Exchange, client fidelity fund (margin) submitted to Indonesian Derivatives Clearing House, and the transaction is directly observed by BAPPEBTI (Commodity Futures Trading Regulatory Agency">Transaksi keseluruhan produk indeks kami (berjangka kontrak Hong Kong dan Jepang Saham Index) mencatat di Bursa Berjangka Jakarta, dana kesetiaan klien (<span class="mytool"><a href="https://www.sg-berjangka.com/index.php/id/edukasi/glosarium/131-margin" style="background-image: initial; background-position: initial; background-repeat: initial; background-attachment: initial; color: #444e67; outline: none; border-bottom: 1px dashed;">margin</a></span>) disampaikan kepada PT&nbsp;<span class="mytool"><a href="https://www.sg-berjangka.com/index.php/id/edukasi/glosarium/121-kliring" style="background-image: initial; background-position: initial; background-repeat: initial; background-attachment: initial; color: #444e67; outline: none; border-bottom: 1px dashed;">Kliring</a></span>&nbsp;Berjangka Indonesia, dan transaksi langsung diamati oleh BAPPEBTI (Pengawas Perdagangan Berjangka Komoditi Badan</span><span title=").">).</span></p>
+      <p style="text-align: justify;"><span title="2. Online Trading Facility"><strong>2 . Fasilitas Online Trading</strong></span></p>
+      <p style="text-align: justify;"><span title="With the progress of the existing technology, and to give the client satisfaction and conformability in doing the transaction, the client is able to conduct his/her transaction through out internet access, and also capable to monitor his/her account on transaction screen every time">Dengan kemajuan teknologi yang ada, dan memberikan kepuasan klien dan kemantapan dalam melakukan transaksi, klien mampu melakukan / transaksi nya melalui akses internet keluar, dan juga mampu untuk memantau / akunnya di layar setiap kali transaksi</span><span title=".">.</span></p>
+      <p style="text-align: justify;"><span title="3. Daily transaction report"><strong>3 . Laporan transaksi harian</strong></span></p>
+      <p style="text-align: justify;"><span title="Every day investor will get an Account Statement of client comprising about transaction done by the investor;">Setiap hari investor akan mendapatkan Laporan Rekening klien yang terdiri dari sekitar transaksi yang dilakukan oleh investor;&nbsp;</span><span title="thereby the investor could always see their investment advance.">sehingga investor bisa selalu melihat muka investasi mereka.</span></p>
+      <p style="text-align: justify;"><span title="4. Fund Security and Safety Guarantee"><strong>4 . Keamanan Dana dan Jaminan Keselamatan</strong></span></p>
+      <p style="text-align: justify;"><span title="the transferring fund to Segregated of The Indonesian Derivatives Clearing House as margin on open position of client or relocate to client personal account by client request (Withdrawal).">PT. Rifan Financindo Berjangka ini, merupakan perusahaan keuangan yang sangat terpercaya, hal ini di awali dengan adanya pengakuan dari anggota bursa, yang menyerahkan surat persetujuan anggota bursa atau di singkat dengan SPAB, yang isinya mengatakan bahwa “PT. Rifan Financindo Berjangka ini telah resmi menjadi anggota bursa berjangka Jakarta”. Selain dari sertifikasi yang diberikan oleh anggota bursa untuk PT. Rifan Financindo Berjangka, perusahaan keuangan ini juga telah mendapatkan legalitas yang tentunya akan memberikan peningkatan keamanan untuk para nasabah dan calon nasabah nya (para investor).</span></p>
+      <p style="line-height: 22px; color: #797979; font-family: 'Open Sans', sans-serif; font-size: 13px; text-align: justify;"><span id="result_box" lang="id" style="color: #000000;"><span title="5. A quick withdrawal process"><strong>5 . Proses penarikan cepat</strong></span></span></p>
+      <p style="text-align: justify;"><span title="Withdrawal process of investor fund through ordinary mechanism during three workdays (T+3), but PT.">Proses penarikan dana investor melalui mekanisme biasa selama tiga hari kerja (T +3), namun PT. Rifan Financindo Berjangka</span><span title="Solid Gold Berjangka attempt to process withdrawal of fund only during one day job activity only (T+1).">&nbsp;upaya untuk memproses penarikan dana hanya selama aktivitas pekerjaan satu hari saja (T +1).</span></p>
+      <p style="text-align: justify;"><span title="6. Professional brokerage official"><strong>6 . <span style="color: #000000;">Profesional resmi&nbsp;<span class="mytool"><a href="https://www.sg-berjangka.com/index.php/id/edukasi/glosarium/35-broker" style="background-image: initial; background-position: initial; background-repeat: initial; background-attachment: initial; color: #000000; outline: none; border-bottom: 1px dashed;">broker</a></span></span></strong></span></p>
+      <p style="text-align: justify;"><span title="PT.">PT. Rifan Financindo Berjangka</span><span title="Solid Gold Berjangka is supported a professional brokerage official, national and overseas graduated, has reliable ability that is able to give any suggestion based on market analysis, either fundamentally or also technically to assist investor in taking a decision.">&nbsp;didukung pejabat broker profesional, lulusan nasional dan luar negeri, memiliki kemampuan handal yang dapat memberikan saran berdasarkan analisis pasar, baik fundamental maupun teknis juga untuk membantu investor dalam mengambil keputusan.</span></p>
+      <p style="text-align: justify;"><span title="7. Research &amp; Analyst Support"><strong>7 . Departemen Research &amp; Development</strong></span></p>
+      <p style="text-align: justify;"><span title="Shore up by market analyst, publishing a market report and technical analysis every time.">Rifan Financindo Berjangka memiliki departemen R&amp;D yang dapat membantu para nasabah melakukan transaksi, R&amp;D selalu memberikan analisa - analisa baik secara teknikal atau fundamental dan memberikan berita - berita ter-update tentang pasar maupun global yang akan memberikan informasi kepada nasabah selama 24 jam.&nbsp;</span></p>	</div>
+      </div>
+    </section>
+
+  </main><!-- End #main -->
+@endsection

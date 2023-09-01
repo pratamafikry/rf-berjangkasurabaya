@@ -15,6 +15,7 @@ class AdminAppController extends Controller
         return view('dashboard.admin.index', [
             'users' => User::where('team_id', auth()->user()->team_id)->get(),
             'useradmin'=>User::all(),
+            'divisi'=>User::where('divisi_id', auth()->user()->divisi_id)->get()
         ]);
     }
 

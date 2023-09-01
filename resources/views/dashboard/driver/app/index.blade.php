@@ -22,7 +22,7 @@
                {{-- <code>.datatable</code> --}}
 
               <!-- Table with stripped rows -->
-              <table class="table datatable">
+              <table class="table" id="user">
                 <thead>
                   <tr>
                     <th scope="col">#</th>

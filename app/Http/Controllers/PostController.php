@@ -12,7 +12,14 @@ class PostController extends Controller
     {
         return view('posts', [
             "title" => "All Post",
-            "posts" => Post::latest()->get()
+            "posts" => Post::latest()->paginate(7)
+        ]);
+    }
+
+    public function kegiatan()
+    {
+        return view('kegiatan', [
+            "posts" => Post::where('category_id', '2')->get()
         ]);
     }
     public function show(Post $post)

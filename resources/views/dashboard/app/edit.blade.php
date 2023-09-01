@@ -50,8 +50,7 @@
           </div>
 
           <div class="mb-1">
-            <label for="manager" class="form-label">Manager</label>
-            <input type="text" class="form-control @error('manager') is-invalid @enderror" id="manager" aria-describedby="id" name="manager" value="{{$app->manager}}" readonly>
+            <input type="hidden" class="form-control @error('manager') is-invalid @enderror" id="manager" aria-describedby="id" name="manager" value="{{$app->manager}}" readonly>
             @error('manager')
               <div class="invalid-feedback">{{$message}}</div>
             @enderror
@@ -66,21 +65,18 @@
           </div>
 
           <div class="mb-1">
-            <label for="nama_client" class="form-label">Nama Client</label>
-            <input type="text" class="form-control @error('nama_client') is-invalid @enderror" id="nama_client" aria-describedby="id" name="nama_client" value="{{$app->nama_client}}" readonly>
+            <input type="hidden" class="form-control @error('nama_client') is-invalid @enderror" id="nama_client" aria-describedby="id" name="nama_client" value="{{$app->nama_client}}" readonly>
             @error('nama_client')
             <div class="invalid-feedback">{{$message}}</div>
             @enderror
           </div>
 
           <div class="mb-1">
-            <label for="client" class="form-label">Status Nasabah</label>
-            <input type="text" class="form-control @error('status') is-invalid @enderror" id="status" aria-describedby="id" name="status" value="{{$app->status}}" readonly>
+            <input type="hidden" class="form-control @error('status') is-invalid @enderror" id="status" aria-describedby="id" name="status" value="{{$app->status}}" readonly>
 
           </div>
           <div class="mb-1">
-            <label for="client" class="form-label">Tujuan Appointment</label>
-            <input type="text" class="form-control @error('tujuan') is-invalid @enderror" id="tujuan" aria-describedby="id" name="tujuan" value="{{$app->tujuan}}" readonly>
+            <input type="hidden" class="form-control @error('tujuan') is-invalid @enderror" id="tujuan" aria-describedby="id" name="tujuan" value="{{$app->tujuan}}" readonly>
         
           </div>
           <div class="mb-1">
@@ -93,6 +89,7 @@
             <input type="text" class="form-control @error('kendaraan') is-invalid @enderror" id="kendaraan" aria-describedby="id" name="kendaraan" value="{{$app->kendaraan}}" readonly>
             
           </div>
+          @can('driver')
           <div class="mb-1">
             <label for="kendaraan" class="form-label">Driver</label>
             <select class="form-select" name="driver_id" aria-label="Default select example">
@@ -102,6 +99,29 @@
                 @endforeach
               </select>
           </div>
+          <input type="hidden" name="hasil" id="hasil" value="{{$app->hasil}}" readonly>
+          <input type="hidden" name="status_bas" id="status_bas" value="{{$app->status_bas}}" readonly>
+          @endcan
+
+          @can('receptionist')
+          <input type="hidden" name="driver_id" id="driver_id" value="{{$app->driver_id}}">
+          <div class="mb-1">
+          <label for="hasil" class="form-label">Hasil</label>
+          <select class="form-select" name="hasil" aria-label="Default select example">
+              <option selected value="{{$app->hasil}}">{{$app->hasil}}l</option>
+              <option value="Done">Done</option>
+              <option value="Cancel">Cancel</option>
+            </select>
+        </div>
+        <div class="mb-1">
+          <label for="status_bas" class="form-label">Status BAS</label>
+            <select class="form-select" name="status_bas" aria-label="Default select example">
+                <option selected value="{{$app->status_bas}}">{{$app->status_bas}}</option>
+                <option value="Belum Diinput">Belum Diinput</option>
+                <option value="Sudah Diinput">Sudah Diinput</option>
+              </select>
+          </div>
+          @endcan
         <button type="submit" class="btn btn-primary">Submit</button>
       </form>
     </div>

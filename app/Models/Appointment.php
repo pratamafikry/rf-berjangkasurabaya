@@ -36,6 +36,11 @@ class Appointment extends Model
         ];
     }
 
+    public function divisi()
+    {
+        return $this->belongsTo(Divisi::class, 'divisi_id');
+    }
+
     public function getRouteKeyName()
     {
         return 'slug';

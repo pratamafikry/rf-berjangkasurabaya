@@ -1,27 +1,15 @@
 @extends('layout.main')
 @section('container')
-<main id="main">
-
-    <!-- ======= Breadcrumbs Section ======= -->
-    <section class="breadcrumbs">
-      <div class="container">
-
-        <div class="d-flex justify-content-between align-items-center">
-          <h2>Loco London Gold</h2>
-          <ol>
-            <li><a href="/">Home</a></li>
-            <li>Edukasi</li>
-            <li>Loco London Gold</li>
-          </ol>
-        </div>
-
+<!-- about us -->
+<section class="section-lg about pb-0">
+  <div class="container">
+    <div class="row">
+      <div class="col-lg-12">
+        <h2 class="section-title">Loco London Gold</h2>
       </div>
-    </section><!-- End Breadcrumbs Section -->
-
-    <section class="inner-page">
-      <div class="container">
+      <div class="col-lg-12 mb-100">
         <div itemprop="articleBody">
-          <h2 class="contentheading" style="padding: 0px; margin: 0px; font-family: Tahoma,Arial,Helvetica,sans-serif; font-size: 22px; color: #333333; text-align: justify;"><span style="font-family: 'Open Sans', sans-serif; font-size: 10pt;">Emas merupakan salah satu jenis komoditi yang paling banyak diminati untuk tujuan investasi. Di samping itu, emas juga digunakan sebagai standar keuangan atau ekonomi, cadangan devisa dan alat pembayaran yang paling utama di beberapa negara. Para investor umumnya membeli emas untuk&nbsp;<em style="padding: 0px; margin: 0px;">hedge</em>&nbsp;atau&nbsp;<em style="padding: 0px; margin: 0px;">safe haven</em>&nbsp;terhadap beberapa krisis termasuk ekonomi, politik, sosial atau krisis yang berbasis mata uang.</span></h2>
+          <h2 class="contentheading" style="padding: 0px; margin: 0px; font-family: Tahoma,Arial,Helvetica,sans-serif; font-size: 22px; color: #fe2929; text-align: justify;"><span style="font-family: 'Open Sans', sans-serif; font-size: 10pt;">Emas merupakan salah satu jenis komoditi yang paling banyak diminati untuk tujuan investasi. Di samping itu, emas juga digunakan sebagai standar keuangan atau ekonomi, cadangan devisa dan alat pembayaran yang paling utama di beberapa negara. Para investor umumnya membeli emas untuk&nbsp;<em style="padding: 0px; margin: 0px;">hedge</em>&nbsp;atau&nbsp;<em style="padding: 0px; margin: 0px;">safe haven</em>&nbsp;terhadap beberapa krisis termasuk ekonomi, politik, sosial atau krisis yang berbasis mata uang.</span></h2>
       <div class="article-content" style="padding: 0px; margin: 0px; font-size: 11px; font-family: Tahoma,Arial,sans-serif; line-height: 16.5px; text-align: justify;">
       <p style="padding: 0px; margin-top: 12px; margin-bottom: 12px;"><span style="font-family: 'Open Sans', sans-serif; font-size: 10pt;">Permintaan emas fisik mengalami peningkatan cukup signifikan dari tahun ke tahun. Padahal cadangan emas dunia sangatlah terbatas. Oleh karena itu, dibeberapa negara maju telah menyediakan investasi alternatif berupa produk derivatif emas dengan menarik sejumlah&nbsp;<em style="padding: 0px; margin: 0px;">margin</em>&nbsp;sebagai jaminan transaksinya (<em style="padding: 0px; margin: 0px;">margin trading</em>). Mengapa diperlukan&nbsp;<em style="padding: 0px; margin: 0px;">margin</em>?. Ini karena adanya faktor harga, dimana harga emas juga dapat berfluktuasi sebagaimana komoditas lainnya.</span></p>
       <p>&nbsp;</p>
@@ -82,7 +70,15 @@
       <p style="padding: 0px; margin-top: 12px; margin-bottom: 12px;"><span style="font-size: 8pt;"><em><span style="font-family: 'Open Sans',sans-serif;">*) Diolah dari beberapa sumber</span></em></span></p>
       </div>	</div>
       </div>
-    </section>
-
-  </main><!-- End #main -->
+    </div>
+  </div>
+  <!-- background shapes -->
+  <img src="/assets-index/images/background-shape/green-dot.png" alt="background-shape" class="about-bg-1 up-down-animation">
+  <img src="/assets-index/images/background-shape/blue-dot.png" alt="background-shape" class="about-bg-2 left-right-animation">
+  <img src="/assets-index/images/background-shape/green-half-cycle.png" alt="background-shape" class="about-bg-3 up-down-animation">
+  <img src="/assets-index/images/background-shape/seo-ball-1.png" alt="background-shape" class="about-bg-4 left-right-animation">
+  <img src="/assets-index/images/background-shape/team-bg-triangle.png" alt="background-shape" class="about-bg-5 up-down-animation">
+  <img src="/assets-index/images/background-shape/service-half-cycle.png" alt="background-shape" class="about-bg-6 left-right-animation">
+</section>
+<!-- /about us -->
 @endsection

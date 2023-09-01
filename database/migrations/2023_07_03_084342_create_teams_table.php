@@ -13,6 +13,7 @@ return new class extends Migration
     {
         Schema::create('teams', function (Blueprint $table) {
             $table->id();
+            $table->foreignId('divisi_id');
             $table->string('nama_team');
             $table->string('slug')->unique();
             $table->timestamps();

@@ -3,13 +3,16 @@
 namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
+use App\Models\Post;
 
 class HomeController extends Controller
 {
     public function home()
     {
         return view('index', [
-            "title" => "Home"
+            "title" => "Home",
+            "posts" => Post::latest()->take(5)->get(),
+            "kegiatan"=>Post::where('category_id', '2')->take(5)->get(),
         ]);
     }
 
@@ -97,5 +100,26 @@ class HomeController extends Controller
     public function loco()
     {
         return view('loco');
+    }
+    public function symbol()
+    {
+        return view('indexsymbols');
+    }
+    public function fasilitas()
+    {
+        return view('fasilitas');
+    }
+    public function kalender()
+    {
+        return view('kalender');
+    }
+    public function kontak()
+    {
+        return view('kontak');
+    }
+    
+    public function edukasi()
+    {
+        return view('edukasi');
     }
 }

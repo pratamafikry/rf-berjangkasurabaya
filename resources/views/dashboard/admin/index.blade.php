@@ -17,19 +17,20 @@
                {{-- <code>.datatable</code> --}}
 
               <!-- Table with stripped rows -->
-              <table class="table" id="data">
-                <thead>
-                  <tr>
-                    <th scope="col">#</th>
-                    <th scope="col">Nama</th>
-                    <th scope="col">Username</th>
-                    {{-- <th scope="col">Email</th> --}}
-                    <th scope="col">Team</th>
-                    <th scope="col">Aksi</th>
-                  </tr>
-                </thead>
-                <tbody>
+              
                   @can('user')
+                  <table class="table" id="data">
+                    <thead>
+                      <tr>
+                        <th scope="col">#</th>
+                        <th scope="col">Nama</th>
+                        <th scope="col">Username</th>
+                        {{-- <th scope="col">Email</th> --}}
+                        <th scope="col">Team</th>
+                        <th scope="col">Aksi</th>
+                      </tr>
+                    </thead>
+                    <tbody>
                     @foreach ($users as $user)
                   <tr>
                     <th>{{$loop->iteration}}</th>
@@ -43,6 +44,18 @@
                   @endcan
 
                   @can('admin')
+                  <table class="table" id="data">
+                    <thead>
+                      <tr>
+                        <th scope="col">#</th>
+                        <th scope="col">Nama</th>
+                        <th scope="col">Username</th>
+                        {{-- <th scope="col">Email</th> --}}
+                        <th scope="col">Team</th>
+                        <th scope="col">Aksi</th>
+                      </tr>
+                    </thead>
+                    <tbody>
                     @foreach ($users as $user)
                   <tr>
                     <th>{{$loop->iteration}}</th>
@@ -56,6 +69,18 @@
                   @endcan
 
                   @can('superadmin')
+                  <table class="table" id="data">
+                    <thead>
+                      <tr>
+                        <th scope="col">#</th>
+                        <th scope="col">Nama</th>
+                        <th scope="col">Username</th>
+                        {{-- <th scope="col">Email</th> --}}
+                        <th scope="col">Team</th>
+                        <th scope="col">Aksi</th>
+                      </tr>
+                    </thead>
+                    <tbody>
                   @foreach ($useradmin as $user)
                   <tr>
                     <th>{{$loop->iteration}}</th>
@@ -63,6 +88,33 @@
                     <td>{{$user->username}}</td>
                     {{-- <td>{{$user->email}}</td> --}}
                     <td>{{$user->team->nama_team}}</td>
+                    <td><a href="/delete/{{$user->id}}" onclick="return confirm('Hapus Akun?')" class="btn btn-danger">Hapus</a>
+                  </tr>
+                  @endforeach
+                  @endcan
+
+                  @can('kadiv')
+                  <table class="table" id="data">
+                    <thead>
+                      <tr>
+                        <th scope="col">#</th>
+                        <th scope="col">Nama</th>
+                        <th scope="col">Username</th>
+                        {{-- <th scope="col">Email</th> --}}
+                        <th scope="col">Team</th>
+                        <th scope="col">Divisi</th>
+                        <th scope="col">Aksi</th>
+                      </tr>
+                    </thead>
+                    <tbody>
+                  @foreach ($divisi as $user)
+                  <tr>
+                    <th>{{$loop->iteration}}</th>
+                    <td>{{$user->name}}</td>
+                    <td>{{$user->username}}</td>
+                    {{-- <td>{{$user->email}}</td> --}}
+                    <td>{{$user->team->nama_team}}</td>
+                    <td>{{$user->divisi->name}}</td>
                     <td><a href="/delete/{{$user->id}}" onclick="return confirm('Hapus Akun?')" class="btn btn-danger">Hapus</a></td>
                   </tr>
                   @endforeach

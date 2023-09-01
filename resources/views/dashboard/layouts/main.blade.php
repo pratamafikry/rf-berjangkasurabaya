@@ -31,6 +31,16 @@
   <!-- Template Main CSS File -->
   <link href="/assets/css/style.css" rel="stylesheet">
 
+  <!-- Trix Editor -->
+  <link href="/assets/css/trix.css" rel="stylesheet">
+
+  <style>
+    trix-toolbar [data-trix-button-group="file-tools"]{
+      display: none;
+    }
+  </style>
+
+
   <!-- =======================================================
   * Template Name: NiceAdmin
   * Updated: May 30 2023 with Bootstrap v5.3.0
@@ -121,6 +131,7 @@
   <script src="/assets/vendor/chart.js/chart.umd.js"></script>
   <script src="/assets/vendor/echarts/echarts.min.js"></script>
   <script src="/assets/vendor/quill/quill.min.js"></script>
+  <script src="/assets/js/trix.js"></script>
   <script src="/assets/vendor/simple-datatables/simple-datatables.js"></script>
   <script src="/assets/vendor/tinymce/tinymce.min.js"></script>
   <script src="/assets/vendor/php-email-form/validate.js"></script>
@@ -135,6 +146,7 @@
 
 
 
+  
   <script>
     $(document).ready(function() {
       $('#data').DataTable( {
@@ -149,16 +161,23 @@
   <script>
     $(document).ready(function() {
       $('#user').DataTable( {
-          dom: 'Bfrtip',
-          buttons: [
+          // dom: 'Bfrtip',
+          // buttons: [
               
-          ],
+          // ],
           scrollX: true
       } );
   } );
   </script>
   <!-- Template Main JS File -->
   <script src="/assets/js/main.js"></script>
+
+  <script>
+    $(".filter").on('change', function(){
+      let sesi = $("#filter-sesi").val()
+      console.log(sesi);
+    })
+  </script>
 
   
 

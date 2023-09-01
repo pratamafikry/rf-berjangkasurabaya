@@ -22,6 +22,28 @@
                {{-- <code>.datatable</code> --}}
 
               <!-- Table with stripped rows -->
+              @can('driver')
+              <table class="table" id="data">
+                <thead>
+                  <tr>
+                    <th scope="col">#</th>
+                    <th scope="col">Nama</th>
+                    <th scope="col">Plat Nomor</th>
+                  </tr>
+                </thead>
+                <tbody>
+              @foreach ($drivers as $driver)
+              <tr>
+              <td>{{$loop ->iteration}}</td>
+              <td>{{$driver->name}}</td>
+              <td>{{$driver->plat_mobil}}</td>
+              {{-- <td>{{$user->email}}</td>
+              <td>{{$user->team->nama_team}}</td> --}}
+              </tr>
+                  @endforeach
+              @endcan
+
+              @can('superadmin')
               <table class="table" id="data">
                 <thead>
                   <tr>
@@ -32,7 +54,6 @@
                   </tr>
                 </thead>
                 <tbody>
-              @can('driver')
               @foreach ($drivers as $driver)
               <tr>
               <td>{{$loop ->iteration}}</td>
@@ -42,30 +63,18 @@
               <td>{{$user->team->nama_team}}</td> --}}
               <td>
                 {{-- <a href="/dashboard/marketing/{{$user->username}}/edit" class="btn btn-warning">Edit</a> --}}
-                <a href="/delete/driver/{{$driver->id}}" onclick="return confirm('Hapus Akun ?')" class="btn btn-danger">Hapus</a>
-              </td>
-              </tr>
-                  @endforeach
-              @endcan
 
-              @can('superadmin')
-              @foreach ($drivers as $driver)
-              <tr>
-              <td>{{$loop ->iteration}}</td>
-              <td>{{$driver->name}}</td>
-              <td>{{$driver->plat_mobil}}</td>
-              {{-- <td>{{$user->email}}</td>
-              <td>{{$user->team->nama_team}}</td> --}}
-              <td>
-                {{-- <a href="/dashboard/marketing/{{$user->username}}/edit" class="btn btn-warning">Edit</a> --}}
                 <a href="/delete/driver/{{$driver->id}}" onclick="return confirm('Hapus Akun ?')" class="btn btn-danger">Hapus</a>
               </td>
               </tr>
                   @endforeach
-                  @endcan
+                  
                 </tbody>
               </table>
+ 
               <a href="/dashboard/driver/create" class="btn btn-primary mb-3" style="float: right">Tambah Driver</a>
+              @endcan
+
               <!-- End Table with stripped rows -->
 
             </div>

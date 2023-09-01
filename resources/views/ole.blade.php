@@ -1,32 +1,21 @@
 @extends('layout.main')
 @section('container')
-<main id="main">
-
-    <!-- ======= Breadcrumbs Section ======= -->
-    <section class="breadcrumbs">
-      <div class="container">
-
-        <div class="d-flex justify-content-between align-items-center">
-          <h2>KONTRAK BERJANGKA OLEIN (OLE)</h2>
-          <ol>
-            <li><a href="index.html">Home</a></li>
-            <li>KONTRAK BERJANGKA OLEIN (OLE)</li>
-          </ol>
-        </div>
-
+<!-- about us -->
+<section class="section-lg about pb-0">
+  <div class="container">
+    <div class="row">
+      <div class="col-lg-12">
+        <h2 class="section-title">{{__('ole1')}}</h2>
       </div>
-    </section><!-- End Breadcrumbs Section -->
-
-    <section class="inner-page">
-      <div class="container">
+      <div class="col-lg-12 mb-100">
         <div itemprop="articleBody">
-          <p style="line-height: 22px; color: #797979; font-family: 'Open Sans', sans-serif; font-size: 13px; text-align: center;"><span style="font-family: 'Open Sans', sans-serif; font-size: 18pt; color: #000000;"><strong>Spesifikasi Kontrak Berjangka Olein</strong></span></p>
+          <p style="line-height: 22px; color: #797979; font-family: 'Open Sans', sans-serif; font-size: 13px; text-align: center;"><span style="font-family: 'Open Sans', sans-serif; font-size: 18pt; color: #fff;"><strong>{{__('ole2')}}</strong></span></p>
       <div align="center">
-      <table border="1" style="max-width: 100%; font-family: 'Open Sans', sans-serif; background-color: #ffffff;" cellspacing="0" cellpadding="0">
+      <table border="1" id="user" class="table" style="max-width: 100%; font-family: 'Open Sans', sans-serif; background-color: rgba(19, 50, 74, 0.28);" cellspacing="0" cellpadding="0">
       <tbody>
       <tr>
       <td style="padding-left: 10px;">
-      <p style="line-height: 22px;"><span style="font-family: 'Open Sans', sans-serif; font-size: 10pt;"><strong>Kode Kontrak</strong></span></p>
+      <p style="line-height: 22px;"><span style="font-family: 'Open Sans', sans-serif; font-size: 10pt;"><strong>{{__('ole3')}}</strong></span></p>
       </td>
       <td style="padding-left: 10px;">
       <p style="line-height: 22px;"><span style="font-family: 'Open Sans', sans-serif; font-size: 10pt;">OLE</span></p>
@@ -34,171 +23,179 @@
       </tr>
       <tr>
       <td style="padding-left: 10px;">
-      <p style="line-height: 22px;"><span style="font-family: 'Open Sans', sans-serif; font-size: 10pt;"><strong>Dasar Kontrak</strong></span></p>
+      <p style="line-height: 22px;"><span style="font-family: 'Open Sans', sans-serif; font-size: 10pt;"><strong>{{__('ole4')}}</strong></span></p>
       </td>
       <td style="padding-left: 10px;">
-      <p style="line-height: 22px;"><span style="font-family: 'Open Sans', sans-serif; font-size: 10pt;">Olein dengan kualitas Standar Pasar</span></p>
-      </td>
-      </tr>
-      <tr>
-      <td style="padding-left: 10px;">
-      <p style="line-height: 22px;"><span style="font-family: 'Open Sans', sans-serif; font-size: 10pt;"><strong>Satuan Kontrak</strong></span></p>
-      </td>
-      <td style="padding-left: 10px;">
-      <p style="line-height: 22px;"><span style="font-family: 'Open Sans', sans-serif; font-size: 10pt;">20 ton (20.000 Kg)</span></p>
+      <p style="line-height: 22px;"><span style="font-family: 'Open Sans', sans-serif; font-size: 10pt;">{{__('ole5')}}</span></p>
       </td>
       </tr>
       <tr>
       <td style="padding-left: 10px;">
-      <p style="line-height: 22px;"><span style="font-family: 'Open Sans', sans-serif; font-size: 10pt;"><strong>Bulan Kontrak</strong></span></p>
+      <p style="line-height: 22px;"><span style="font-family: 'Open Sans', sans-serif; font-size: 10pt;"><strong>{{ trans('ole6') }}</strong></span></p>
       </td>
       <td style="padding-left: 10px;">
-      <p style="line-height: 22px;"><span style="font-family: 'Open Sans', sans-serif; font-size: 10pt;">6 (enam) bulan berturut-turut, sehingga setiap hari perdagangan terdapat enam Bulan Kontrak</span></p>
-      </td>
-      </tr>
-      <tr>
-      <td style="padding-left: 10px;">
-      <p style="line-height: 22px;"><span style="font-family: 'Open Sans', sans-serif; font-size: 10pt;"><strong>Hari &amp; Jam Perdagangan</strong></span></p>
-      </td>
-      <td style="padding-left: 10px;">
-      <p style="line-height: 22px;"><span style="font-family: 'Open Sans', sans-serif; font-size: 10pt;">Setiap hari perdagangan</span></p>
-      <p style="line-height: 22px;"><span style="font-family: 'Open Sans', sans-serif; font-size: 10pt;">Pukul 09.30 &ndash; 17.30 wib</span></p>
+      <p style="line-height: 22px;"><span style="font-family: 'Open Sans', sans-serif; font-size: 10pt;">{{ trans('ole7') }}</span></p>
       </td>
       </tr>
       <tr>
       <td style="padding-left: 10px;">
-      <p style="line-height: 22px;"><span style="font-family: 'Open Sans', sans-serif; font-size: 10pt;"><strong>Pasca Penutupan</strong></span></p>
+      <p style="line-height: 22px;"><span style="font-family: 'Open Sans', sans-serif; font-size: 10pt;"><strong>{{ trans('ole8') }}</strong></span></p>
       </td>
       <td style="padding-left: 10px;">
-      <p style="line-height: 22px;"><span style="font-family: 'Open Sans', sans-serif; font-size: 10pt;">Sesi Pasca Penutupan dilaksanakan setiap hari perdagangan, yaitu mulai pukul 17.45 WIB sampai dengan 18.00 WIB.</span></p>
-      <p style="line-height: 22px;"><span style="font-family: 'Open Sans', sans-serif; font-size: 10pt;">Amanat beli dan jual yang dimasukkan ke dalam JAFeTS adalah pada Harga Penyelesaian hari itu.</span></p>
-      </td>
-      </tr>
-      <tr>
-      <td style="padding-left: 10px;">
-      <p style="line-height: 22px;"><span style="font-family: 'Open Sans', sans-serif; font-size: 10pt;"><strong>Tukar Fisik dengan Berjangka</strong></span></p>
-      </td>
-      <td style="padding-left: 10px;">
-      <p style="line-height: 22px;"><span style="font-family: 'Open Sans', sans-serif; font-size: 10pt;">Pihak-pihak yang melakukan transaksi jual/beli Olein, PPO lainnya dan CPO diluar bursa dapat mendaftarkannya ke Bursa untuk ditukar dengan transaksi berjangka bagi kedua belah pihak.</span></p>
+      <p style="line-height: 22px;"><span style="font-family: 'Open Sans', sans-serif; font-size: 10pt;">{{ trans('ole9') }}</span></p>
       </td>
       </tr>
       <tr>
       <td style="padding-left: 10px;">
-      <p style="line-height: 22px;"><span style="font-family: 'Open Sans', sans-serif; font-size: 10pt;"><strong>Hari Perdagangan Terakhir</strong></span></p>
+      <p style="line-height: 22px;"><span style="font-family: 'Open Sans', sans-serif; font-size: 10pt;"><strong>{{ trans('ole10') }}</strong></span></p>
       </td>
       <td style="padding-left: 10px;">
-      <p style="line-height: 22px;"><span style="font-family: 'Open Sans', sans-serif; font-size: 10pt;">Perdagangan untuk suatu Bulan Kontrak berakhir pada akhir sesi Pasca Penutupan tanggal 15 bulan yang bersangkutan, jika tanggal 15 bukan merupakan hari perdagangan, maka perdagangan berakhir pada hari perdagangan sesudahnya.</span></p>
-      </td>
-      </tr>
-      <tr>
-      <td style="padding-left: 10px;">
-      <p style="line-height: 22px;"><span style="font-family: 'Open Sans', sans-serif; font-size: 10pt;"><strong>Harga</strong></span></p>
-      </td>
-      <td style="padding-left: 10px;">
-      <p style="line-height: 22px;"><span style="font-family: 'Open Sans', sans-serif; font-size: 10pt;">Rupiah per kilogram (termasuk PPN)</span></p>
+      <p style="line-height: 22px;"><span style="font-family: 'Open Sans', sans-serif; font-size: 10pt;">{{ trans('ole11') }}</span></p>
+      <p style="line-height: 22px;"><span style="font-family: 'Open Sans', sans-serif; font-size: 10pt;">{{ trans('ole12') }}</span></p>
       </td>
       </tr>
       <tr>
       <td style="padding-left: 10px;">
-      <p style="line-height: 22px;"><span style="font-family: 'Open Sans', sans-serif; font-size: 10pt;"><strong>Perubahan Harga Minimum</strong></span></p>
+      <p style="line-height: 22px;"><span style="font-family: 'Open Sans', sans-serif; font-size: 10pt;"><strong>{{ trans('ole13') }}</strong></span></p>
       </td>
       <td style="padding-left: 10px;">
-      <p style="line-height: 22px;"><span style="font-family: 'Open Sans', sans-serif; font-size: 10pt;">Rp 5,- /kg (termasuk PPN)</span></p>
-      <p style="line-height: 22px;"><span style="font-family: 'Open Sans', sans-serif; font-size: 10pt;">Rp. 100.000,- per lot (termasuk PPN)</span></p>
-      </td>
-      </tr>
-      <tr>
-      <td style="padding-left: 10px;">
-      <p style="line-height: 22px;"><span style="font-family: 'Open Sans', sans-serif; font-size: 10pt;"><strong>Batas Perubahan Harga</strong></span></p>
-      </td>
-      <td style="padding-left: 10px;">
-      <p style="line-height: 22px;"><span style="font-family: 'Open Sans', sans-serif; font-size: 10pt;">Rp.150,- per kilogram diatas atau dibawah Harga Penyelesaian hari perdagangan sebelumnya. Batas perubahan harga ini tidak berlaku untuk Bulan Berjalan dan Bulan Terdekat, kalau Bulan Berjalan sudah tidak diperdagangkan lagi.</span></p>
+      <p style="line-height: 22px;"><span style="font-family: 'Open Sans', sans-serif; font-size: 10pt;">{{ trans('ole14') }}</span></p>
+      <p style="line-height: 22px;"><span style="font-family: 'Open Sans', sans-serif; font-size: 10pt;">{{ trans('ole15') }}</span></p>
       </td>
       </tr>
       <tr>
       <td style="padding-left: 10px;">
-      <p style="line-height: 22px;"><span style="font-family: 'Open Sans', sans-serif; font-size: 10pt;"><strong>Penyelesaian Akhir</strong></span></p>
+      <p style="line-height: 22px;"><span style="font-family: 'Open Sans', sans-serif; font-size: 10pt;"><strong>{{ trans('ole16') }}</strong></span></p>
       </td>
       <td style="padding-left: 10px;">
-      <p style="line-height: 22px;"><span style="font-family: 'Open Sans', sans-serif; font-size: 10pt;">Penyerahan DO Terdaftar dengan kualitas Standar Pasar</span></p>
-      </td>
-      </tr>
-      <tr>
-      <td style="padding-left: 10px;">
-      <p style="line-height: 22px;"><span style="font-family: 'Open Sans', sans-serif; font-size: 10pt;"><strong>Waktu Pemberitahuan Penyerahan</strong></span></p>
-      </td>
-      <td style="padding-left: 10px;">
-      <p style="line-height: 22px;"><span style="font-family: 'Open Sans', sans-serif; font-size: 10pt;">5 (lima) hari perdagangan terakhir. Kalau tanggal 15 itu bukan hari perdagangan maka hari perdagangan sesudahnya menjadi hari Pemberitahuan Penyerahan terakhir.</span></p>
+      <p style="line-height: 22px;"><span style="font-family: 'Open Sans', sans-serif; font-size: 10pt;">{{ trans('ole17') }}</span></p>
       </td>
       </tr>
       <tr>
       <td style="padding-left: 10px;">
-      <p style="line-height: 22px;"><span style="font-family: 'Open Sans', sans-serif; font-size: 10pt;"><strong>Waktu Pemberitahuan Alokasi</strong></span></p>
+      <p style="line-height: 22px;"><span style="font-family: 'Open Sans', sans-serif; font-size: 10pt;"><strong>{{ trans('ole18') }}</strong></span></p>
       </td>
       <td style="padding-left: 10px;">
-      <p style="line-height: 22px;"><span style="font-family: 'Open Sans', sans-serif; font-size: 10pt;">Sebelum sesi pertama hari perdagangan pertama setelah hari pemberitahuan penyerahan</span></p>
-      </td>
-      </tr>
-      <tr>
-      <td style="padding-left: 10px;">
-      <p style="line-height: 22px;"><span style="font-family: 'Open Sans', sans-serif; font-size: 10pt;"><strong>Waktu Serah</strong></span></p>
-      </td>
-      <td style="padding-left: 10px;">
-      <p style="line-height: 22px;"><span style="font-family: 'Open Sans', sans-serif; font-size: 10pt;">Sebelum sesi pertama hari perdagangan kedua setelah dilakukan pemberitahuan penyerahan</span></p>
+      <p style="line-height: 22px;"><span style="font-family: 'Open Sans', sans-serif; font-size: 10pt;">{{ trans('ole19') }}</span></p>
       </td>
       </tr>
       <tr>
       <td style="padding-left: 10px;">
-      <p style="line-height: 22px;"><span style="font-family: 'Open Sans', sans-serif; font-size: 10pt;"><strong>Mutu</strong></span></p>
+      <p style="line-height: 22px;"><span style="font-family: 'Open Sans', sans-serif; font-size: 10pt;"><strong>{{ trans('ole20') }}</strong></span></p>
       </td>
       <td style="padding-left: 10px;">
-      <p style="line-height: 22px;"><span style="font-family: 'Open Sans', sans-serif; font-size: 10pt;">Standard PASAR</span></p>
-      <p style="line-height: 22px;"><span style="font-family: 'Open Sans', sans-serif; font-size: 10pt;">Free Fatty Acids (FFA) &lt; 0,15% AOCS Method Ca 5a-40</span></p>
-      <p style="line-height: 22px;"><span style="font-family: 'Open Sans', sans-serif; font-size: 10pt;">Moisture &amp; Impurities &lt; 0,1% AOCS Method Ca 2b-38</span></p>
-      <p style="line-height: 22px;"><span style="font-family: 'Open Sans', sans-serif; font-size: 10pt;">AOCS Method Ca 3a-46</span></p>
-      <p style="line-height: 22px;"><span style="font-family: 'Open Sans', sans-serif; font-size: 10pt;">Iodine Value (WIJS) &gt; 56 AOCS Method Cd 1d-92</span></p>
-      <p style="line-height: 22px;"><span style="font-family: 'Open Sans', sans-serif; font-size: 10pt;">Warna Merah (Lovibond 5,25 inci) &lt; 4 Red AOCS Method Cc 13b-45</span></p>
-      <p style="line-height: 22px;"><span style="font-family: 'Open Sans', sans-serif; font-size: 10pt;">Slip Melt Point &lt; 24o C AOCS Method Cc 1-25</span></p>
-      <p style="line-height: 22px;"><span style="font-family: 'Open Sans', sans-serif; font-size: 10pt;">Cloud Point 10,75o</span></p>
+      <p style="line-height: 22px;"><span style="font-family: 'Open Sans', sans-serif; font-size: 10pt;">{{ trans('ole21') }}</span></p>
       </td>
       </tr>
       <tr>
       <td style="padding-left: 10px;">
-      <p style="line-height: 22px;"><span style="font-family: 'Open Sans', sans-serif; font-size: 10pt;"><strong>Tempat Penyerahan</strong></span></p>
+      <p style="line-height: 22px;"><span style="font-family: 'Open Sans', sans-serif; font-size: 10pt;"><strong>{{ trans('ole22') }}</strong></span></p>
       </td>
       <td style="padding-left: 10px;">
-      <p style="line-height: 22px;"><span style="font-family: 'Open Sans', sans-serif; font-size: 10pt;">Pilihan DO berada pada Penjual dengan batas maksimum 5 (lima) lot per penerbit DO Tangki Terdaftar per hari penyerahan</span></p>
-      </td>
-      </tr>
-      <tr>
-      <td style="padding-left: 10px;">
-      <p style="line-height: 22px;"><span style="font-family: 'Open Sans', sans-serif; font-size: 10pt;"><strong>Satuan Penyerahan</strong></span></p>
-      </td>
-      <td style="padding-left: 10px;">
-      <p style="line-height: 22px;"><span style="font-family: 'Open Sans', sans-serif; font-size: 10pt;">20 ton dengan toleransi + 2%</span></p>
+      <p style="line-height: 22px;"><span style="font-family: 'Open Sans', sans-serif; font-size: 10pt;">{{ trans('ole23') }}</span></p>
+      <p style="line-height: 22px;"><span style="font-family: 'Open Sans', sans-serif; font-size: 10pt;">{{ trans('ole24') }}</span></p>
       </td>
       </tr>
       <tr>
       <td style="padding-left: 10px;">
-      <p style="line-height: 22px;"><span style="font-family: 'Open Sans', sans-serif; font-size: 10pt;"><strong>Posisi Wajib Lapor</strong></span></p>
+      <p style="line-height: 22px;"><span style="font-family: 'Open Sans', sans-serif; font-size: 10pt;"><strong>{{ trans('ole25') }}</strong></span></p>
       </td>
       <td style="padding-left: 10px;">
-      <p style="line-height: 22px;"><span style="font-family: 'Open Sans', sans-serif; font-size: 10pt;">150 lot</span></p>
+      <p style="line-height: 22px;"><span style="font-family: 'Open Sans', sans-serif; font-size: 10pt;">{{ trans('ole26') }}</span></p>
       </td>
       </tr>
       <tr>
       <td style="padding-left: 10px;">
-      <p style="line-height: 22px;"><span style="font-family: 'Open Sans', sans-serif; font-size: 10pt;"><strong>Batas Posisi</strong></span></p>
+      <p style="line-height: 22px;"><span style="font-family: 'Open Sans', sans-serif; font-size: 10pt;"><strong>{{ trans('ole27') }}</strong></span></p>
       </td>
       <td style="padding-left: 10px;">
-      <p style="line-height: 22px;"><span style="font-family: 'Open Sans', sans-serif; font-size: 10pt;">500 lot</span></p>
+      <p style="line-height: 22px;"><span style="font-family: 'Open Sans', sans-serif; font-size: 10pt;">{{ trans('ole28') }}</span></p>
+      </td>
+      </tr>
+      <tr>
+      <td style="padding-left: 10px;">
+      <p style="line-height: 22px;"><span style="font-family: 'Open Sans', sans-serif; font-size: 10pt;"><strong>{{ trans('ole29') }}</strong></span></p>
+      </td>
+      <td style="padding-left: 10px;">
+      <p style="line-height: 22px;"><span style="font-family: 'Open Sans', sans-serif; font-size: 10pt;">{{ trans('ole30') }}</span></p>
+      </td>
+      </tr>
+      <tr>
+      <td style="padding-left: 10px;">
+      <p style="line-height: 22px;"><span style="font-family: 'Open Sans', sans-serif; font-size: 10pt;"><strong>{{ trans('ole31') }}</strong></span></p>
+      </td>
+      <td style="padding-left: 10px;">
+      <p style="line-height: 22px;"><span style="font-family: 'Open Sans', sans-serif; font-size: 10pt;">{{ trans('ole32') }}</span></p>
+      </td>
+      </tr>
+      <tr>
+      <td style="padding-left: 10px;">
+      <p style="line-height: 22px;"><span style="font-family: 'Open Sans', sans-serif; font-size: 10pt;"><strong>{{ trans('ole33') }}</strong></span></p>
+      </td>
+      <td style="padding-left: 10px;">
+      <p style="line-height: 22px;"><span style="font-family: 'Open Sans', sans-serif; font-size: 10pt;">{{ trans('ole34') }}</span></p>
+      </td>
+      </tr>
+      <tr>
+      <td style="padding-left: 10px;">
+      <p style="line-height: 22px;"><span style="font-family: 'Open Sans', sans-serif; font-size: 10pt;"><strong>{{ trans('ole35') }}</strong></span></p>
+      </td>
+      <td style="padding-left: 10px;">
+      <p style="line-height: 22px;"><span style="font-family: 'Open Sans', sans-serif; font-size: 10pt;">{{ trans('ole36') }}</span></p>
+      <p style="line-height: 22px;"><span style="font-family: 'Open Sans', sans-serif; font-size: 10pt;">{{ trans('ole37') }}</span></p>
+      <p style="line-height: 22px;"><span style="font-family: 'Open Sans', sans-serif; font-size: 10pt;">{{ trans('ole38') }}</span></p>
+      <p style="line-height: 22px;"><span style="font-family: 'Open Sans', sans-serif; font-size: 10pt;">{{ trans('ole39') }}</span></p>
+      <p style="line-height: 22px;"><span style="font-family: 'Open Sans', sans-serif; font-size: 10pt;">{{ trans('ole40') }}</span></p>
+      <p style="line-height: 22px;"><span style="font-family: 'Open Sans', sans-serif; font-size: 10pt;">{{ trans('ole41') }}</span></p>
+      <p style="line-height: 22px;"><span style="font-family: 'Open Sans', sans-serif; font-size: 10pt;">{{ trans('ole42') }}</span></p>
+      <p style="line-height: 22px;"><span style="font-family: 'Open Sans', sans-serif; font-size: 10pt;">{{ trans('ole43') }}</span></p>
+      </td>
+      </tr>
+      <tr>
+      <td style="padding-left: 10px;">
+      <p style="line-height: 22px;"><span style="font-family: 'Open Sans', sans-serif; font-size: 10pt;"><strong>{{ trans('ole44') }}</strong></span></p>
+      </td>
+      <td style="padding-left: 10px;">
+      <p style="line-height: 22px;"><span style="font-family: 'Open Sans', sans-serif; font-size: 10pt;">{{ trans('ole45') }}</span></p>
+      </td>
+      </tr>
+      <tr>
+      <td style="padding-left: 10px;">
+      <p style="line-height: 22px;"><span style="font-family: 'Open Sans', sans-serif; font-size: 10pt;"><strong>{{ trans('ole46') }}</strong></span></p>
+      </td>
+      <td style="padding-left: 10px;">
+      <p style="line-height: 22px;"><span style="font-family: 'Open Sans', sans-serif; font-size: 10pt;">{{ trans('ole47') }}</span></p>
+      </td>
+      </tr>
+      <tr>
+      <td style="padding-left: 10px;">
+      <p style="line-height: 22px;"><span style="font-family: 'Open Sans', sans-serif; font-size: 10pt;"><strong>{{ trans('ole48') }}</strong></span></p>
+      </td>
+      <td style="padding-left: 10px;">
+      <p style="line-height: 22px;"><span style="font-family: 'Open Sans', sans-serif; font-size: 10pt;">{{ trans('ole49') }}</span></p>
+      </td>
+      </tr>
+      <tr>
+      <td style="padding-left: 10px;">
+      <p style="line-height: 22px;"><span style="font-family: 'Open Sans', sans-serif; font-size: 10pt;"><strong>{{ trans('ole50') }}</strong></span></p>
+      </td>
+      <td style="padding-left: 10px;">
+      <p style="line-height: 22px;"><span style="font-family: 'Open Sans', sans-serif; font-size: 10pt;">{{ trans('ole51') }}</span></p>
       </td>
       </tr>
       </tbody>
       </table>
       </div>
       </div>
-    </section>
-
-  </main><!-- End #main -->
+    </div>
+  </div>
+  <!-- background shapes -->
+  <img src="/assets-index/images/background-shape/green-dot.png" alt="background-shape" class="about-bg-1 up-down-animation">
+  <img src="/assets-index/images/background-shape/blue-dot.png" alt="background-shape" class="about-bg-2 left-right-animation">
+  <img src="/assets-index/images/background-shape/green-half-cycle.png" alt="background-shape" class="about-bg-3 up-down-animation">
+  <img src="/assets-index/images/background-shape/seo-ball-1.png" alt="background-shape" class="about-bg-4 left-right-animation">
+  <img src="/assets-index/images/background-shape/team-bg-triangle.png" alt="background-shape" class="about-bg-5 up-down-animation">
+  <img src="/assets-index/images/background-shape/service-half-cycle.png" alt="background-shape" class="about-bg-6 left-right-animation">
+</section>
+<!-- /about us -->
 @endsection

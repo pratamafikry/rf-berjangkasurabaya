@@ -22,7 +22,7 @@ class AppServiceProvider extends ServiceProvider
      */
     public function boot(): void
     {
-        // Paginator::useBootstrap();
+        Paginator::useBootstrapFive();
         Gate::define('admin', function(User $user){
             return $user->permission === 'admin';
         });
@@ -34,6 +34,15 @@ class AppServiceProvider extends ServiceProvider
         });
         Gate::define('user', function(User $user){
             return $user->permission ==='user';
+        });
+        Gate::define('kadiv', function(User $user){
+            return $user->permission ==='kadiv';
+        });
+        Gate::define('receptionist', function(User $user){
+            return $user->permission ==='receptionist';
+        });
+        Gate::define('writer', function(User $user){
+            return $user->permission ==='writer';
         });
     }
 }

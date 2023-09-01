@@ -17,7 +17,7 @@ body {
   font-family: "Open Sans", sans-serif;
   /* background: #dbd7cd; */
   background: #202b41;
-  color: #1f243b;
+  color: #ffffff;
 }
 
 a {
@@ -235,7 +235,7 @@ h6 {
 }
 
 .card-title {
-  padding: 20px 0 15px 0;
+  padding: 20px 0 0px 0;
   font-size: 18px;
   font-weight: 500;
   color: #012970;
@@ -1238,7 +1238,7 @@ h6 {
   color: #012970;
 }
 label{
-  color: #fff;
+  color: #000000;
 }
 /* div.dataTables_wrapper {
   width: 100%;

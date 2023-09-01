@@ -1,625 +1,382 @@
 @extends('layout.main')
 @section('container')
-<section id="hero">
+<section class="hero-section hero" data-background="" style="background-image: url(/assets-index/images/hero-area/banner-b.png);">
+  <div class="container">
+    <div class="row">
+      <div class="col-lg-11 text-center zindex-1">
+        <h4 class="mb-0" style="color: #ffffff">{{__('hero1')}}</h2>
+        <h1 class="mb-3" style="color: #ffffff">{{__('hero2')}}</h1>
+        <p class="mb-4" style="color: #929397">{{__('hero3')}}</p>
+        <a href="http://etrade.rifanberjangka.com/login.php" class="btn btn-secondary btn-lg" style="margin-bottom: 5%">{{__('mulai-trading')}}</a>
+        <a href="#feature" class="btn btn-secondary btn-lg page-scroll" style="margin-left: 0.5%; margin-bottom: 5%;">{{__('pelajari')}}</a>
+        <!-- banner image -->
+        <img class="img-fluid banner-image" src="/assets-index/images/hero-area/banner-img.png" alt="banner-img">
+      </div>
+    </div>
+  </div>
+  <!-- background shapes -->
+  <div id="scene">
+    <img class="img-fluid hero-bg-1 up-down-animation" src="/assets-index/images/background-shape/feature-bg-2.png" alt="">
+    <img class="img-fluid hero-bg-2 left-right-animation" src="/assets-index/images/background-shape/seo-ball-1.png" alt="">
+    <img class="img-fluid hero-bg-3 left-right-animation" src="/assets-index/images/background-shape/seo-half-cycle.png" alt="">
+    <img class="img-fluid hero-bg-4 up-down-animation" src="/assets-index/images/background-shape/green-dot.png" alt="">
+    <img class="img-fluid hero-bg-5 left-right-animation" src="/assets-index/images/background-shape/blue-half-cycle.png" alt="">
+    <img class="img-fluid hero-bg-6 up-down-animation" src="/assets-index/images/background-shape/seo-ball-1.png" alt="">
+    <img class="img-fluid hero-bg-7 left-right-animation" src="/assets-index/images/background-shape/yellow-triangle.png" alt="">
+    <img class="img-fluid hero-bg-8 up-down-animation" src="/assets-index/images/background-shape/service-half-cycle.png" alt="">
+    <img class="img-fluid hero-bg-9 up-down-animation" src="/assets-index/images/background-shape/team-bg-triangle.png" alt="">
+  </div>
+</section>
+<!-- /hero-area -->
 
-    <div class="container">
-      <div class="row justify-content-between">
-        <div class="col-lg-7 pt-5 pt-lg-0 order-2 order-lg-1 d-flex align-items-center">
-          <div data-aos="zoom-out">
-            <h1>Rifan Financindo Berjangka <span>Ciputra World Surabaya</span></h1>
-            <h2>Mengapa memilih Rifan Financindo Berjangka?</h2>
-            <div class="text-center text-lg-start">
-              <a href="#about" class="btn-get-started scrollto">Get Started</a>
-            </div>
+<!-- feature -->
+<section class="section feature mb-0" id="feature">
+  <div class="container">
+    <div class="row">
+      <div class="col-lg-12 text-center" style="margin-top: 325px">
+        <h2 class="section-title">{{__('feature1')}}</h2>
+        <p class="mb-100">{{__('feature2')}}</p>
+      </div>
+      <!-- feature item -->
+      <div class="col-md-6 mb-80">
+        <div class="d-flex feature-item">
+          <div>
+            <i class="ti-shield feature-icon mr-4"></i>
+          </div>
+          <div>
+            <h4 style="margin-left: 10px">{{__('legalitas1')}}</h4>
+            <p style="margin-left: 10px">{{__('legalitas2')}}</p>
           </div>
         </div>
-        <div class="col-lg-4 order-1 order-lg-2 hero-img" data-aos="zoom-out" data-aos-delay="300">
-          <img src="/asset-home/img/hero-img.png" class="img-fluid animated" alt="">
+      </div>
+      <!-- feature item -->
+      <div class="col-md-6 mb-80">
+        <div class="d-flex feature-item">
+          <div>
+            <i class="ti-mobile feature-icon mr-4"></i>
+          </div>
+          <div>
+            <h4 style="margin-left: 10px">{{__('kemudahan1')}}</h4>
+            <p style="margin-left: 10px">{{__('kemudahan2')}}</p>
+          </div>
+        </div>
+      </div>
+      <!-- feature item --> 
+      <div class="col-md-6 mb-80">
+        <div class="d-flex feature-item">
+          <div>
+            <i class="ti-user feature-icon mr-4"></i>
+          </div>
+          <div>
+            <h4 style="margin-left: 10px">{{__('pialang1')}}</h4>
+            <p style="margin-left: 10px">{{__('pialang2')}}</p>
+          </div>
+        </div>
+      </div>
+      <!-- feature item -->
+      <div class="col-md-6 mb-80">
+        <div class="d-flex feature-item">
+          <div>
+            <i class="ti-receipt feature-icon mr-4"></i>
+          </div>
+          <div>
+            <h4 style="margin-left: 10px">{{__('laporan-transaksi1')}}</h4>
+            <p style="margin-left: 10px">{{__('laporan-transaksi2')}}</p>
+          </div>
         </div>
       </div>
     </div>
+    <div class="col-lg-11 text-center zindex-1" style="">
+    <a href="https://regol.rifan-financindo-berjangka.co.id" class="btn btn-secondary btn-lg" style="margin-bottom: 5%;"><strong>{{ trans('akun') }}</strong></a>
+    <a href="http://etrade.rifanberjangka.com/login.php" class="btn btn-secondary btn-lg" style="margin-bottom: 5%;">{{__('mulai-trading')}}</a>
+    {{-- <a href="https://regol.rifan-financindo-berjangka.co.id/" class="btn btn-daftar btn-lg" style="margin-left: 15%; margin-bottom: 5 %"><strong>BUKA AKUN SEKARANG</strong></a>
+    <a href="http://etrade.rifanberjangka.com/login.php" class="btn btn-secondary btn-lg" style="margin-left: 3%; margin-bottom: 5%">MULAI TRADING SEKARANG</a> --}}
+  </div>
+  </div>
+  </div>
+  <img class="feature-bg-1 up-down-animation" src="/assets-index/images/background-shape/feature-bg-1.png" alt="bg-shape">
+  <img class="feature-bg-2 left-right-animation" src="/assets-index/images/background-shape/feature-bg-2.png" alt="bg-shape">
+</section>
+<!-- /feature -->
 
-    <svg class="hero-waves" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 24 150 28 " preserveAspectRatio="none">
-      <defs>
-        <path id="wave-path" d="M-160 44c30 0 58-18 88-18s 58 18 88 18 58-18 88-18 58 18 88 18 v44h-352z">
-      </defs>
-      <g class="wave1">
-        <use xlink:href="#wave-path" x="50" y="3" fill="rgba(255,255,255, .1)">
-      </g>
-      <g class="wave2">
-        <use xlink:href="#wave-path" x="50" y="0" fill="rgba(255,255,255, .2)">
-      </g>
-      <g class="wave3">
-        <use xlink:href="#wave-path" x="50" y="9" fill="#fff">
-      </g>
-    </svg>
+<!-- marketing -->
+<section class="section-lg seo">
+  <div class="container">
+    <div class="row">
+      <div class="col-md-6">
+        <div class="seo-image">
+          <img class="img-fluid" src="/assets-index/images/logo.png" alt="form-img">
+        </div>
+      </div>
+      <div class="col-md-5">
+        <h2 class="section-title">{{__('tentang-kami1')}}</h2>
+        <p>{{__('tentang-kami2')}} </p>
+        <a href="/about" class="btn btn-rounded" >{{__('baca')}}</a>
+      </div>
+    </div>
+  </div>
+  <!-- background image -->
+  <img class="img-fluid seo-bg" src="/assets-index/images/backgrounds/seo-bg.png" alt="seo-bg">
+  <!-- background-shape -->
+  <img class="seo-bg-shape-1 left-right-animation" src="/assets-index/images/background-shape/seo-ball-1.png" alt="bg-shape">
+  <img class="seo-bg-shape-2 up-down-animation" src="/assets-index/images/background-shape/seo-half-cycle.png" alt="bg-shape">
+  <img class="seo-bg-shape-3 left-right-animation" src="/assets-index/images/background-shape/seo-ball-2.png" alt="bg-shape">
+</section>
+<!-- /marketing -->
 
-  </section><!-- End Hero -->
+<!-- service -->
+<section class="section-lg service">
+  <div class="container">
+    <div class="row justify-content-between">
+      <div class="col-md-5 order-2 order-md-1">
+        <h2 class="section-title">{{__('kelebihan1')}}</h2>
+        <p class="mb-4">{{__('kelebihan2')}}</p>
+        <ul class="pl-0 service-list">
+          <li style="color: #ececec"><i class="ti-shield text-purple"></i>{{__('kelebihan3')}}</li>
+          <li style="color: #ececec"><i class="ti-mobile text-purple"></i>{{__('kelebihan4')}}</li>
+          <li style="color: #ececec"><i class="ti-stats-up text-purple"></i>{{__('kelebihan5')}}</li>
+          <li style="color: #ececec"><i class="ti-face-smile text-purple"></i>{{__('kelebihan6')}}</li>
+          <li style="color: #ececec"><i class="ti-credit-card text-purple"></i>{{__('kelebihan7')}}</li>
+        </ul>
+        <a href="https://install.appcenter.ms/users/rifanfinancindoberjangkapt-gmail.com/apps/rifanfinancindoberjangka/distribution_groups/rifanfinancindoberjangka" style="margin-right: 25px"><img src="/assets-index/images/apk_download.png" alt="" style="width: 200px"></a>
+        <a href="https://apps.apple.com/us/app/tradepro-rifanfinancindo/id1449233045"><img src="/assets-index/images/appstore_download.png" alt="" style="width: 200px"></a>
+      </div>
+      <div class="col-md-7 order-1 order-md-2">
+        <img class="img-fluid layer-3" src="/assets-index/images/hero-img.png" alt="service">
+      </div>
+    </div>
+  </div>
+  <!-- background image -->
+  <img class="img-fluid service-bg" src="/assets-index/images/backgrounds/service-bg.png" alt="service-bg">
+  <!-- background shapes -->
+  <img class="service-bg-shape-1 up-down-animation" src="/assets-index/images/background-shape/service-half-cycle.png" alt="background-shape">
+  <img class="service-bg-shape-2 left-right-animation" src="/assets-index/images/background-shape/feature-bg-2.png" alt="background-shape">
+</section>
+<!-- /service -->
 
-  <main id="main">
-
-    <!-- ======= About Section ======= -->
-    <section id="about" class="about">
-      <div class="container-fluid">
-
-        <div class="row">
-          <div class="col-xl-5 col-lg-6 video-box d-flex justify-content-center align-items-stretch" data-aos="fade-right">
-            {{-- <a href="https://youtu.be/FwApTaNsolo" class="glightbox play-btn mb-4"></a> --}}
+<section class="section-lg pb-0 pricing" id="produk">
+  <div class="container">
+    <div class="row">
+      <div class="col-lg-12 text-center">
+        <h2 class="section-title">{{__('produk1')}}</h2>
+        <p class="mb-50">{{__('produk2')}} </p>
+      </div>
+      <div class="col-lg-10 mx-auto">
+        <div class="row justify-content-center">
+          <!-- pricing table -->
+          <div class="produk-logo col-md-6 col-lg-4 mb-5 mb-lg-0">
+            <a href="/spa3"><img src="/assets-index/images/product/produk-1.png" alt="" style="width: 120%"></a>
+            
           </div>
-
-          <div class="col-xl-7 col-lg-6 icon-boxes d-flex flex-column align-items-stretch justify-content-center py-5 px-lg-5" data-aos="fade-left">
-            <h3>Tentang PT. Rifan Financindo Berjangka Ciputra World Surabaya</h3>
-            <p>PT. Rifan Financindo Berjangka Ciputra World Surabaya hadir sebagai perusahaan yang berorientasi kepada layanan jasa yang memberikan fasilitas dan edukasi terbaik bagi masyarakat yang tertarik untuk mendapatkan keuntungan dalam perdagangan komoditas dan pasar derivatif di Indonesia. Perusahaan telah didukung oleh teknologi informasi yang mumpuni dan sumber daya manusia profesional yang memenuhi standar kualifikasi kepatutan dan kompetensi oleh pemerintah yang dinaungi oleh <strong>Badan Pengawas Perdagangan Berjangka Komoditi (BAPPEBTI)</strong></p>
-
-            <div class="icon-box" data-aos="zoom-in" data-aos-delay="100">
-              <div class="icon"><i class="bx bx-globe"></i></div>
-              <h4 class="title"><a href="">Apa Yang Kami Lakukan ?</a></h4>
-              <p class="description">Kami memberikan pandangan, arahan dan edukasi kepada seluruh nasabah maupun masyarakat yang tertarik dengan kegiatan bisnis investasi. Konsultan Perusahaan Rifan Financindo Surabaya berupaya dengan sepenuh hati untuk memberikan yang terbaik dan mengembangkan kesadaran masyarakat bahwa kegiatan investasi merupakan sebuah kegiatan yang menyenangkan dan mempunyai nilai bisnis dengan keuntungan yang sangat tinggi.</p>
-            </div>
-
-            <div class="icon-box" data-aos="zoom-in" data-aos-delay="200">
-              <div class="icon"><i class="bx bx-clipboard"></i></div>
-              <h4 class="title"><a href="">Misi Kami</a></h4>
-              <p class="description">1. Memberikan pelayanan terbaikdan terpercaya <br>
-                2. Fair terhadap konsumen <br>
-                3. Tumbuh & berkembang secara kekeluargaan <br>
-                4. Menciptakan lapangan kerja yang seluas-luasnya</p>
-            </div>
-
-            {{-- <div class="icon-box" data-aos="zoom-in" data-aos-delay="300">
-              <div class="icon"><i class="bx bx-atom"></i></div>
-              <h4 class="title"><a href="">Dine Pad</a></h4>
-              <p class="description">Explicabo est voluptatum asperiores consequatur magnam. Et veritatis odit. Sunt aut deserunt minus aut eligendi omnis</p>
+          <!-- pricing table -->
+          <div class="produk-logo col-md-6 col-lg-4 mb-5 mb-lg-0">
+            <a href="/spa1"><img src="/assets-index/images/product/produk-2.png" alt="" style="width: 120%"></a>
+            {{-- <div class="rounded text-center pricing-table table-2">
+              <h3>Standard</h3>
+              <h1><span>$</span>75</h1>
+              <p>Far far away, behind the
+                wordmountains, far from the
+                countries Vokalia and
+              </p>
+              <a href="#" class="btn pricing-btn px-2">Buy Now</a>
             </div> --}}
-
           </div>
-        </div>
-
-      </div>
-    </section><!-- End About Section -->
-
-    <!-- ======= Features Section ======= -->
-    <section id="features" class="features">
-      <div class="container">
-
-        <div class="section-title" data-aos="fade-up">
-          <h2>Mengapa Kami ?</h2>
-          <p>Alasan Memilih Kami</p>
-        </div>
-
-        <div class="row" data-aos="fade-left">
-          <div class="col-lg-3 col-md-4">
-            <div class="icon-box" data-aos="zoom-in" data-aos-delay="50">
-              <img src="/asset-home/img/icon-A.png" alt="" style="width: 25%">
-              <h3><a href="/legalitas-perusahaan">Legalitas Perusahaan</a></h3>
-            </div>
-          </div>
-          <div class="col-lg-3 col-md-4 mt-4 mt-md-0">
-            <div class="icon-box" data-aos="zoom-in" data-aos-delay="100">
-              <img src="/asset-home/img/icon-B.png" alt="" style="width: 25%">
-              <h3><a href="/alasan-memilih-kami">Efisiensi Modal</a></h3>
-            </div>
-          </div>
-          <div class="col-lg-3 col-md-4 mt-4 mt-md-0">
-            <div class="icon-box" data-aos="zoom-in" data-aos-delay="150">
-              <img src="/asset-home/img/icon-C.png" alt="" style="width: 25%">
-              <h3><a href="/alasan-memilih-kami">Wakil Pialang Berjangka Resmi</a></h3>
-            </div>
-          </div>
-            <div class="col-lg-3 col-md-4 mt-4 mt-lg-0">
-              <div class="icon-box" data-aos="zoom-in" data-aos-delay="200">
-                <img src="/asset-home/img/icon-D.png" alt="" style="width: 25%">
-                <h3><a href="/alasan-memilih-kami">Likuiditas Tinggi</a></h3>
-              </div>
-            </div>
-          <div class="col-lg-3 col-md-4 mt-4">
-            <div class="icon-box" data-aos="zoom-in" data-aos-delay="250">
-              <img src="/asset-home/img/icon-E.png" alt="" style="width: 25%">
-              <h3><a href="/alasan-memilih-kami">Fasilitas Online Trading</a></h3>
-            </div>
-          </div>
-          <div class="col-lg-3 col-md-4 mt-4">
-            <div class="icon-box" data-aos="zoom-in" data-aos-delay="300">
-              <img src="/asset-home/img/icon-F.png" alt="" style="width: 25%">
-              <h3><a href="/alasan-memilih-kami">Laporan Transaksi Harian</a></h3>
-            </div>
-          </div>
-          <div class="col-lg-3 col-md-4 mt-4">
-            <div class="icon-box" data-aos="zoom-in" data-aos-delay="350">
-              <img src="/asset-home/img/icon-G.png" alt="" style="width: 25%">
-              <h3><a href="/alasan-memilih-kami">Tanpa Batasan Waktu Posisi Terbuka</a></h3>
-            </div>
-          </div>
-          <div class="col-lg-3 col-md-4 mt-4">
-            <div class="icon-box" data-aos="zoom-in" data-aos-delay="400">
-              <img src="/asset-home/img/icon-H.png" alt="" style="width: 25%">
-              <h3><a href="/alasan-memilih-kami">Layanan Sistem Informasi Transaksi Nasabah (SITNa)</a></h3>
-            </div>
-          </div>
-        </div>
-
-      </div>
-    </section><!-- End Features Section -->
-
-    <!-- ======= Counts Section ======= -->
-    <section id="counts" class="counts">
-      <div class="container">
-
-        <div class="row" data-aos="fade-up">
-
-          <div class="col-lg-3 col-md-6">
-            <div class="count-box">
-              <i class="bi bi-emoji-smile"></i>
-              <span data-purecounter-start="0" data-purecounter-end="232" data-purecounter-duration="1" class="purecounter"></span>
-              <p>Happy Clients</p>
-            </div>
-          </div>
-
-          <div class="col-lg-3 col-md-6 mt-5 mt-md-0">
-            <div class="count-box">
-              <i class="bi bi-journal-richtext"></i>
-              <span data-purecounter-start="0" data-purecounter-end="521" data-purecounter-duration="1" class="purecounter"></span>
-              <p>Projects</p>
-            </div>
-          </div>
-
-          <div class="col-lg-3 col-md-6 mt-5 mt-lg-0">
-            <div class="count-box">
-              <i class="bi bi-headset"></i>
-              <span data-purecounter-start="0" data-purecounter-end="1463" data-purecounter-duration="1" class="purecounter"></span>
-              <p>Hours Of Support</p>
-            </div>
-          </div>
-
-          <div class="col-lg-3 col-md-6 mt-5 mt-lg-0">
-            <div class="count-box">
-              <i class="bi bi-people"></i>
-              <span data-purecounter-start="0" data-purecounter-end="15" data-purecounter-duration="1" class="purecounter"></span>
-              <p>Hard Workers</p>
-            </div>
-          </div>
-
-        </div>
-
-      </div>
-    </section><!-- End Counts Section -->
-
-    <!-- ======= Details Section ======= -->
-    <section id="details" class="details">
-      <div class="container">
-
-        <div class="section-title" data-aos="fade-up">
-          <h2>Produk Unggulan</h2>
-          <p>Berikut Produk Unggulan Kami</p>
-        </div>
-
-        <div class="row content">
-          <div class="col-md-4" data-aos="fade-left">
-            <img src="/asset-home/img/produk-1.png" class="img-fluid" alt="">
-          </div>
-          <div class="col-md-8 pt-5 order-2 order-md-1" data-aos="fade-up">
-            <h3>Emas LOCO London</h3>
-            <p class="fst-italic">
-              roduk derivatif emas Loco London XUL10 (Rupiah) dan XULF (USD) adalah kode kontrak gulir harian emas Loco London yang ditransaksikan melaui mekanisme Sistem Perdagangan Alternatif di Bursa Berjangka Jakarta. Harga perdagangan XUL10/XULF mengacu pada harga fisik emas Loco London over the counter (OTC) di New York.
-            </p>
-            <div class="text-center text-lg-start">
-              <a href="/spa3" class="btn-get-started scrollto">Pelajari Lebih Lanjut</a>
-            </div>
-          </div>
-        </div>
-
-        
-        
-        <div class="row content">
-          <div class="col-md-4 order-1 order-md-2" data-aos="fade-right">
-            <img src="/asset-home/img/produk-2.png" class="img-fluid" alt="">
-          </div>
-          <div class="col-md-8 pt-5" data-aos="fade-up">
-            <h3>Indeks Derivatif Saham Hong Kong</h3>
-            <p class="fst-italic">
-              HKK50_BBJ (Rupiah) dan HKK5U_BBJ (USD) adalah kode kontrak gulir berkala indeks asing (indeks derivatif saham Hong Kong) yang ditransaksikan melaui mekanisme Sistem Perdagangan Alternatif di Bursa Berjangka Jakarta. Harga perdagangan HKK50_BBJ/HKK5U_BBJ mengacu pada produk derivatif saham di Hong Kong Exchanges and Clearing Limited (HKEx).Indeks derivatif saham Hong Kong (Hang Seng Index Futures) di HKEx adalah turunan dari indeks saham utama Hang Seng (Hang Seng Index), sehingga setiap perubahan harga yang terjadi pada indeks derivatif tersebut akan selalu mengacu pada perubahan yang terjadi di pasar sahamnya.
-            </p>
-            <div class="text-center text-lg-start">
-              <a href="/spa3" class="btn-get-started scrollto">Pelajari Lebih Lanjut</a>
-            </div>
-          </div>
-        </div>
-        
-        <div class="row content">
-          <div class="col-md-4" data-aos="fade-right">
-            <img src="/asset-home/img/produk-3.png" class="img-fluid" alt="">
-          </div>
-          <div class="col-md-8 pt-4" data-aos="fade-up">
-            <h3>Indeks Derivatif Saham Jepang</h3>
-            <p class="">
-              PK50_BBJ (IDR) dan JPK5U_BBJ (USD) adalah kode kontrak bergulir berkala indeks asing (indeks derivatif saham Jepang) yang terdaftar dan tercatat di Bursa Berjangka Jakarta. Harga perdagangan JPK50_BBJ / JPK5U_BBJ referensi derivatif untuk indeks saham Nikkei 225 diperdagangkan di Singapore Exchange (SGX).</p>
-
-              <div class="text-center text-lg-start">
-                <a href="/spa2" class="btn-get-started scrollto">Pelajari Lebih Lanjut</a>
-              </div>
-          </div>
-        </div>
-       
-
-      </div>
-    </section><!-- End Details Section -->
-
-    <!-- ======= Gallery Section ======= -->
-    <section id="gallery" class="gallery">
-      <div class="container">
-
-        <div class="section-title" data-aos="fade-up">
-          <h2>Gallery</h2>
-          <p>Check our Gallery</p>
-        </div>
-
-        <div class="row g-0" data-aos="fade-left">
-
-          <div class="col-lg-3 col-md-4">
-            <div class="gallery-item" data-aos="zoom-in" data-aos-delay="100">
-              <a href="/asset-home/img/gallery/gallery-1.jpg" class="gallery-lightbox">
-                <img src="/asset-home/img/gallery/gallery-1.jpg" alt="" class="img-fluid">
-              </a>
-            </div>
-          </div>
-
-          <div class="col-lg-3 col-md-4">
-            <div class="gallery-item" data-aos="zoom-in" data-aos-delay="150">
-              <a href="/asset-home/img/gallery/gallery-2.jpg" class="gallery-lightbox">
-                <img src="/asset-home/img/gallery/gallery-2.jpg" alt="" class="img-fluid">
-              </a>
-            </div>
-          </div>
-
-          <div class="col-lg-3 col-md-4">
-            <div class="gallery-item" data-aos="zoom-in" data-aos-delay="200">
-              <a href="/asset-home/img/gallery/gallery-3.jpg" class="gallery-lightbox">
-                <img src="/asset-home/img/gallery/gallery-3.jpg" alt="" class="img-fluid">
-              </a>
-            </div>
-          </div>
-
-          <div class="col-lg-3 col-md-4">
-            <div class="gallery-item" data-aos="zoom-in" data-aos-delay="250">
-              <a href="/asset-home/img/gallery/gallery-4.jpg" class="gallery-lightbox">
-                <img src="/asset-home/img/gallery/gallery-4.jpg" alt="" class="img-fluid">
-              </a>
-            </div>
-          </div>
-
-          <div class="col-lg-3 col-md-4">
-            <div class="gallery-item" data-aos="zoom-in" data-aos-delay="300">
-              <a href="/asset-home/img/gallery/gallery-5.jpg" class="gallery-lightbox">
-                <img src="/asset-home/img/gallery/gallery-5.jpg" alt="" class="img-fluid">
-              </a>
-            </div>
-          </div>
-
-          <div class="col-lg-3 col-md-4">
-            <div class="gallery-item" data-aos="zoom-in" data-aos-delay="350">
-              <a href="/asset-home/img/gallery/gallery-6.jpg" class="gallery-lightbox">
-                <img src="/asset-home/img/gallery/gallery-6.jpg" alt="" class="img-fluid">
-              </a>
-            </div>
-          </div>
-
-          <div class="col-lg-3 col-md-4">
-            <div class="gallery-item" data-aos="zoom-in" data-aos-delay="400">
-              <a href="/asset-home/img/gallery/gallery-7.jpg" class="gallery-lightbox">
-                <img src="/asset-home/img/gallery/gallery-7.jpg" alt="" class="img-fluid">
-              </a>
-            </div>
-          </div>
-
-          <div class="col-lg-3 col-md-4">
-            <div class="gallery-item" data-aos="zoom-in" data-aos-delay="450">
-              <a href="/asset-home/img/gallery/gallery-8.jpg" class="gallery-lightbox">
-                <img src="/asset-home/img/gallery/gallery-8.jpg" alt="" class="img-fluid">
-              </a>
-            </div>
-          </div>
-
-        </div>
-
-      </div>
-    </section><!-- End Gallery Section -->
-
-    
-    <!-- ======= Team Section ======= -->
-    <section id="news" class="news">
-      <div class="container">
-        
-        <div class="section-title" data-aos="fade-up">
-          <h2>News</h2>
-          <p>Hal-Hal Aktual Seputar Perusahaan</p>
-          <a href="https://www.rfbnews.com/index.php/id/" target="_blank">
-            <img src="/asset-home/img/rfbnews.jpg" alt="">
-          </a>
-        </div>
-        
-        <div class="row justify-content-md-center" data-aos="fade-left">
-          
-          {{-- <div class="col-lg-3 col-md-6 center">
-            <iframe src="https://fxpricing.com/fx-widget/market-currency-rates-widget.php?id=1,2,3,5,14,20" width="100%" height="290" style="border: 1px solid #eee;"></iframe> <div id="fx-pricing-widget-copyright"> <span>Powered by </span><a href="https://fxpricing.com/" target="_blank">FX Pricing</a> </div> <style type="text/css"> #fx-pricing-widget-copyright{ text-align: center; font-size: 13px; font-family: sans-serif; margin-top: 10px; margin-bottom: 10px; color: #9db2bd; } #fx-pricing-widget-copyright a{ text-decoration: unset; color: #bb3534; font-weight: 600; } </style>
-          </div> --}}
-          
-          {{-- <div class="col-lg-3 col-md-6 mt-5 mt-md-0">
-            <!-- Currency Converter Script - FxExchangeRate.com  --><div style="font-size:16px; font-family: sans-serif,Arial, Helvetica;width:278px; line-height:24px;border:1px solid #2D6AB4;background-color:#FFFFFF;margin:0px auto;"><div style="background-color:#2D6AB4;height:2.2rem;color:#FFFFFF; font-weight:bold;text-align:left;padding:6px 0 0 6px; max-width:100%;"><i style="background-size: contain;background-position: 50%;background-repeat: no-repeat; position: relative;display: inline-block;width: 1.33333333em;line-height: 1em; 
-              padding:0 8px 0 0px;font-size:18px;background-image:url(https://w.fxexchangerate.com/static/flags/usd.webp);">&nbsp;</i><a rel="nofollow" style="color:#FFFFFF;padding-left:5px;text-decoration:none;" href="https://usd.fxexchangerate.com">United States Dollar</a></div><script type="text/javascript" src="https://w.fxexchangerate.com/converter.php?fm=USD&ft=EUR,GBP,JPY,AUD,CAD,CNY,HKD,IDR,&lg=en&am=1&ty=2"></script></div><!--  End of Currency Converter Script -  FxExchangeRate.com -->
+          <!-- pricing table -->
+          <div class="produk-logo col-md-6 col-lg-4 mb-5 mb-lg-0">
+            <a href="/spa2"><img src="/assets-index/images/product/produk-3.png" alt="" style="width: 120%"></a>
+            {{-- <div class="rounded text-center pricing-table table-3">
+              <h3>Premium</h3>
+              <h1><span>$</span>99</h1>
+              <p>Far far away, behind the
+                wordmountains, far from the
+                countries Vokalia and
+              </p>
+              <a href="#" class="btn pricing-btn px-2">Buy Now</a>
             </div> --}}
-            
-            <div class="col-lg-9 col-md-6 mt-5 mt-lg-0">
-              <!-- TradingView Widget BEGIN -->
-              <div class="tradingview-widget-container">
-                <div class="tradingview-widget-container__widget"></div>
-                <div class="tradingview-widget-copyright"><a href="https://id.tradingview.com/" rel="noopener nofollow" target="_blank"><span class="blue-text">Lacak seluruh pasar di TradingView</span></a></div>
-                <script type="text/javascript" src="https://s3.tradingview.com/external-embedding/embed-widget-forex-cross-rates.js" async>
-            {
-              "width": 770,
-              "height": 400,
-              "currencies": [
-                "EUR",
-                "USD",
-                "JPY",
-                "GBP",
-                "CHF",
-                "AUD",
-                "CAD",
-                "NZD"
-              ],
-              "isTransparent": false,
-            "colorTheme": "light",
-            "locale": "id"
-          }
-          </script>
           </div>
-          <!-- TradingView Widget END -->
         </div>
+      </div>
+    </div>
+  </div>
+  
+</section>
 
-        {{--<div class="col-lg-3 col-md-6 mt-5 mt-lg-0">
-          <div class="member" data-aos="zoom-in" data-aos-delay="400">
-            <div class="pic"><img src="/asset-home/img/team/team-4.jpg" class="img-fluid" alt=""></div>
-            <div class="member-info">
-              <h4>Amanda Jepson</h4>
-              <span>Accountant</span>
-              <div class="social">
-                <a href=""><i class="bi bi-twitter"></i></a>
-                <a href=""><i class="bi bi-facebook"></i></a>
-                <a href=""><i class="bi bi-instagram"></i></a>
-                <a href=""><i class="bi bi-linkedin"></i></a>
-                </div>
-              </div>
-            </div>
-          </div> --}}
-          
-        </div>
+<!-- team -->
+<section class="section-lg team" id="news">
+  <div class="container-fluid">
+    <div class="row">
+      <div class="col-lg-12 text-center">
+        <h2 class="section-title">{{__('berita1')}}</h2>
+        <p class="mb-5">{{__('berita2')}}</p>
         
       </div>
-    </section><!-- End Team Section -->
+    </div>
+    <div class="col-10 mx-auto">
+      <div class="team-slider">
+        <!-- team-member -->
+        {{-- @foreach($posts as $post)
+        <div class="card">
+          <div class="position-absolute px-2 py-1 text-white" style="background-color: rgba(0,0,0,0.7)"><a href="/categories/{{$post->category->slug}}" class="text-decoration-none text-white">{{$post->category->name}}</a></div>
+          @if ($post->image)
+           <img src="{{ asset('storage/'.$post->image)}}" class="card-img-top" alt="{{ $post->category->name }}">
+          @else
+            <img src="https://source.unsplash.com/500x400?{{$post->category->name}}" class="card-img-top" alt="{{ $post->category->name }}">
+          @endif
+          
+          <div class="card-body">
+              <h5 class="card-title">{{$post->title}}</h5>
+            <p>
+                <small class="text-muted">Author : <a href="/author/{{$post->author->username}}" class="text-decoration-none">{{ $post->author->name}}</a> {{$post->created_at->diffForHumans()}}
+              </small>
+          </p>
+          <p class="card-text">{{$post->excerpt}}</p>
+          <a href="/posts/{{ $post->slug }}" class="btn btn-primary">Read more</a>
+          </div>
+        </div>
+        @endforeach --}}
+        @foreach($posts as $post)
+        <div class="team-member">
+          <div class="d-flex mb-4">
+            <div class="mr-3" style="width: 490px">
+              @if ($post->image)
+           <img class="img-fluid" src="{{ asset('storage/'.$post->image)}}" class="card-img-top" alt="{{ $post->category->name }}">
+          @else
+            <img class="img-fluid" src="https://source.unsplash.com/500x400?{{$post->category->name}}" class="card-img-top" alt="{{ $post->category->name }}">
+          @endif
+            </div>
+          </div>
+            <div class="align-self-center">
+              <a href="/news/{{ $post->slug }}"><h4>{{$post->title}}</h4></a>
+              <h6 class="text-color">Author : {{$post->author->name}} in {{$post->category->name}}</a></h6>
+            </div>
+          <p>{{$post->excerpt}}</p>
+        </div>
+        @endforeach
+      </div>
+      <!-- background shapes -->
+  <img class="pricing-bg-shape-1 up-down-animation" src="/assets-index/images/background-shape/seo-ball-1.png" alt="background-shape">
+  <img class="pricing-bg-shape-2 up-down-animation" src="/assets-index/images/background-shape/seo-half-cycle.png" alt="background-shape">
+  <img class="pricing-bg-shape-3 left-right-animation" src="/assets-index/images/background-shape/team-bg-triangle.png" alt="background-shape">
+    </div>
+    <a href="/news" class="btn btn-rounded-gold mb-4" style="margin-left: 40%">{{__('baca')}}</a>
+  </div>
+  <!-- backgound image -->
+  <img src="/assets-index/images/backgrounds/team-bg.png" alt="team-bg" class="img-fluid team-bg">
+  <!-- background shapes -->
+  <img class="team-bg-shape-1 up-down-animation" src="/assets-index/images/background-shape/seo-ball-1.png" alt="background-shape">
+  <img class="team-bg-shape-2 left-right-animation" src="/assets-index/images/background-shape/seo-ball-1.png" alt="background-shape">
+  <img class="team-bg-shape-3 left-right-animation" src="/assets-index/images/background-shape/team-bg-triangle.png" alt="background-shape">
+  <img class="team-bg-shape-4 up-down-animation img-fluid" src="/assets-index/images/background-shape/team-bg-dots.png" alt="background-shape">
+</section>
+<!-- /team -->
 
-    <!-- ======= Pricing Section ======= -->
-    <section id="invest" class="invest">
-      <div class="container">
+<section class="section-lg team" id="team">
+  <div class="container-fluid">
+    <div class="row">
+      <div class="col-lg-12 text-center">
+        <h2 class="section-title">{{__('kegiatan')}}</h2>
         
-        <div class="section-title" data-aos="fade-up">
-          <h2>Mulai Investasi</h2>
-          <p>Mulai berinvestasi dengan membuat akun trading !</p>
-          
-          <div class="row">
-            <div class="col-sm-6 mb-3 mb-sm-0">
-              <div class="card">
-                <img src="/asset-home/img/trading-bg.png" alt="" class="card-img-top">
-                <div class="card-body" style="align-items: center">
-                  <h5 class="card-title">Mulai Trading</h5>
-                  <a href="http://etrade.rifanberjangka.com/login.php" class="btn btn-danger">Akun Real</a>
-                  <a href="http://demo.rifanberjangka.com/login.php" class="btn btn-danger ">Akun Demo</a>
-                </div>
-              </div>
-            </div>
-            <div class="col-sm-6">
-              <div class="card">
-                <img src="/asset-home/img/regist-bg.png" alt="" class="card-img-top">
-                <div class="card-body">
-                  <h5 class="card-title">Special title treatment</h5>
-                  <a href="https://rf-berjangkasurabaya.com/register/" class="btn btn-success">Request Akun Demo</a>
-                  <a href="https://regol.rifan-financindo-berjangka.co.id/" class="btn btn-success">Registrasi Online</a>
-                </div>
-              </div>
-            </div>
-            
-          </div>
-          
-          
-          
-          
-          
-          
-        </div>
-      </section>
-      <!-- End Pricing Section -->
-
-      
-      <!-- ======= F.A.Q Section ======= -->
-      <section id="faq" class="faq section-bg">
-        <div class="container">
-          
-          <div class="section-title" data-aos="fade-up">
-            <h2>F.A.Q</h2>
-            <p>Frequently Asked Questions</p>
-          </div>
-          
-          <div class="faq-list">
-            <ul>
-              <li data-aos="fade-up">
-                <i class="bx bx-help-circle icon-help"></i> <a data-bs-toggle="collapse" data-bs-target="#faq-list-1" class="collapsed">Apa itu PT. Rifan Financindo Berjangka ? <i class="bx bx-chevron-down icon-show"></i><i class="bx bx-chevron-up icon-close"></i></a>
-                <div id="faq-list-1" class="collapse show" data-bs-parent=".faq-list">
-                  <p>
-                    PT. Rifan Financindo Berjangka berpengalaman lebih dari 20 tahun di industri Perdagangan Berjangka Komoditi dan merupakan perusahaan pialang terbesar dengan menduduki posisi teratas dari 10 perusahaan pialang berjangka teraktif dari PT. Kliring Berjangka Indonesia (Persero).
-                  </p>
-                </div>
-              </li>
-
-              <li data-aos="fade-up" data-aos-delay="200">
-              <i class="bx bx-help-circle icon-help"></i> <a data-bs-toggle="collapse" class="collapse" data-bs-target="#faq-list-3">Apa yang dimaksud dengan perdagangan berjangka komoditi?<i class="bx bx-chevron-down icon-show"></i><i class="bx bx-chevron-up icon-close"></i></a>
-              <div id="faq-list-3" class="collapse" data-bs-parent=".faq-list">
-                <p>
-                  Perdagangan Berjangka Komoditi yang selanjutnya disebut Perdagangan Berjangka adalah segala sesuatu yang berkaitan dengan jual beli Komoditi dengan penarikan Margin dan dengan penyelesaian kemudian berdasarkan Kontrak Berjangka, Kontrak Derivatif Syariah, dan/atau Kontrak Derivatif lainnya.
-                </p>
-              </div>
-            </li>
-            
-            <li data-aos="fade-up" data-aos-delay="100">
-              <i class="bx bx-help-circle icon-help"></i> <a data-bs-toggle="collapse" data-bs-target="#faq-list-2" class="collapsed">Apa manfaat perdagangan berjangka komoditi ?<i class="bx bx-chevron-down icon-show"></i><i class="bx bx-chevron-up icon-close"></i></a>
-              <div id="faq-list-2" class="collapse" data-bs-parent=".faq-list">
-                <p>
-                  Ada tiga manfaat utama dari Perdagangan Berjangka Komoditi. Pertama, sebagai sarana Pengelolaan Risiko (risk management) melalui kegiatan Lindung Nilai (hedging), kedua, sarana pembentukan harga (price discovery), dan ketiga, sebagai alternatif investasi (investment enhancement).
-                </p>
-              </div>
-            </li>
-            
-            
-            <li data-aos="fade-up" data-aos-delay="300">
-              <i class="bx bx-help-circle icon-help"></i> <a data-bs-toggle="collapse" data-bs-target="#faq-list-4" class="collapsed">Apakah PT Rifan Financindo Berjangka legal? <i class="bx bx-chevron-down icon-show"></i><i class="bx bx-chevron-up icon-close"></i></a>
-              <div id="faq-list-4" class="collapse" data-bs-parent=".faq-list">
-                <p>
-                  PT Rifan Financindo Berjangka adalah perusahaan yang legal dan diakui oleh Kementrian Perdagangan dan Bappebti, tercatat di bursa berjangka Jakarta dengan Izin Usaha Pialang Berjangka : Keputusan Kepala BAPPEBTI No : 08 / BAPPEBTI / SI / XII / 2000
-                </p>
-              </div>
-            </li>
-            
-            {{--<li data-aos="fade-up" data-aos-delay="400">
-              <i class="bx bx-help-circle icon-help"></i> <a data-bs-toggle="collapse" data-bs-target="#faq-list-5" class="collapsed">Tortor vitae purus faucibus ornare. Varius vel pharetra vel turpis nunc eget lorem dolor? <i class="bx bx-chevron-down icon-show"></i><i class="bx bx-chevron-up icon-close"></i></a>
-              <div id="faq-list-5" class="collapse" data-bs-parent=".faq-list">
-                <p>
-                  Laoreet sit amet cursus sit amet dictum sit amet justo. Mauris vitae ultricies leo integer malesuada nunc vel. Tincidunt eget nullam non nisi est sit amet. Turpis nunc eget lorem dolor sed. Ut venenatis tellus in metus vulputate eu scelerisque.
-                </p>
-              </div>
-            </li> --}}
-            
-          </ul>
-        </div>
         
       </div>
-    </section><!-- End F.A.Q Section -->
-
-    <!-- ======= Testimonials Section ======= -->
-    <section id="testimonials" class="testimonials">
-      <div class="container">
-
-        <div class="testimonials-slider swiper" data-aos="fade-up" data-aos-delay="100">
-          <div class="swiper-wrapper">
-
-            <div class="swiper-slide">
-              <div class="testimonial-item">
-                <a href="">
-                <img src="/asset-home/img/jfx.png" class="testimonial-img" alt="" style="width: 55%">
-              </a>
-              </div>
-            </div><!-- End testimonial item -->
-            
-            <div class="swiper-slide">
-              <div class="testimonial-item">
-                <a href="https://www.aspebtindo.org/anggota/daftar-anggota">
-                <img src="/asset-home/img/aspeb.png" class="testimonial-img" alt="">
-              </a>
-              </div>
-            </div><!-- End testimonial item -->
-
-            <div class="swiper-slide">
-              <div class="testimonial-item">
-                <a href="">
-                <img src="/asset-home/img/bappebti.png" class="testimonial-img" alt="" style="width: 55%">
-              </a>
-                
-              </div>
-            </div><!-- End testimonial item -->
-
-            <div class="swiper-slide">
-              <div class="testimonial-item">
-                <a href="">
-                <img src="/asset-home/img/kbi.png" class="testimonial-img" alt="" style="width: 55%">
-              </a>
-                
-              </div>
-            </div><!-- End testimonial item -->
-
-
-
+    </div>
+    <div class="col-10 mx-auto">
+      <div class="team-slider">
+        
+        @foreach($kegiatan as $kegiatan)
+        <div class="team-member">
+          <div class="d-flex mb-4">
+            <div class="mr-3" style="width: 490px">
+              @if ($kegiatan->image)
+           <img class="img-fluid" src="{{ asset('storage/'.$kegiatan->image)}}" class="card-img-top" alt="{{ $kegiatan->category->name }}">
+          @else
+            <img class="img-fluid" src="https://source.unsplash.com/500x400?{{$kegiatan->category->name}}" class="card-img-top" alt="{{ $kegiatan->category->name }}">
+          @endif
+            </div>
           </div>
-          <div class="swiper-pagination"></div>
+            <div class="align-self-center">
+              <a href="/news/{{ $kegiatan->slug }}"><h4>{{$kegiatan->title}}</h4></a>
+              <h6 class="text-color">Author : {{$kegiatan->author->name}} in {{$kegiatan->category->name}}</a></h6>
+            </div>
+          <p>{{$kegiatan->excerpt}}</p>
         </div>
-
+        @endforeach
+        
       </div>
-    </section><!-- End Testimonials Section -->
+     <!-- background shapes -->
+  <img class="pricing-bg-shape-1 up-down-animation" src="/assets-index/images/background-shape/seo-ball-1.png" alt="background-shape">
+  <img class="pricing-bg-shape-2 up-down-animation" src="/assets-index/images/background-shape/seo-half-cycle.png" alt="background-shape">
+  <img class="pricing-bg-shape-3 left-right-animation" src="/assets-index/images/background-shape/team-bg-triangle.png" alt="background-shape">
+    </div>
+    <a href="/info-kegiatan" class="btn btn-rounded-gold mb-4" style="margin-left: 40%">{{__('baca')}}</a>
+  </div>
+  <!-- backgound image -->
+  <img src="/assets-index/images/backgrounds/team-bg.png" alt="team-bg" class="img-fluid team-bg">
+  <!-- background shapes -->
+  <img class="team-bg-shape-1 up-down-animation" src="/assets-index/images/background-shape/seo-ball-1.png" alt="background-shape">
+  <img class="team-bg-shape-2 left-right-animation" src="/assets-index/images/background-shape/seo-ball-1.png" alt="background-shape">
+  <img class="team-bg-shape-3 left-right-animation" src="/assets-index/images/background-shape/team-bg-triangle.png" alt="background-shape">
+  <img class="team-bg-shape-4 up-down-animation img-fluid" src="/assets-index/images/background-shape/team-bg-dots.png" alt="background-shape">
+</section>
 
-    <!-- ======= Contact Section ======= -->
-    <section id="contact" class="contact">
-      <div class="container">
-
-        <div class="section-title" data-aos="fade-up">
-          <h2>Contact</h2>
-          <p>Contact Us</p>
-        </div>
-
+<!-- pricing -->
+{{-- <section class="widget">
+  <div class="container-fluid">
+      <h2 class="section-title" style="text-align: center">Kalender Ekonomi & Kurs Mata Uang</h2>
+          <p class="mb-5" style="text-align: center">Indikator yang dapat membantu keputusan transaksi nasabah</p>
+    <div class="card">
+      <div class="card-body" style="background-color: #fff; border-radius: 10px">
         <div class="row">
-
-          <div class="col-lg-4" data-aos="fade-right" data-aos-delay="100">
-            <div class="info">
-              <div class="address">
-                <i class="bi bi-geo-alt"></i>
-                <h4>Location:</h4>
-                <p>Gedung Ciputra World Office Surabaya, Jl. Mayjen Sungkono, Gn. Sari, Kec. Dukuhpakis, Surabaya, Jawa Timur 60224</p>
-              </div>
-
-              <div class="email">
-                <i class="bi bi-envelope"></i>
-                <h4>Email:</h4>
-                <p><strong>Admin :</strong> admin@rf-berjangkasurabaya.com</p>
-                <p><strong>Recruitment :</strong> hr-recruitment@ptrifangroup.com</p>
-                <p><strong>Compliance :</strong> compliance.sby@rifan-financindo-berjangka.co.id</p>
-              </div>
-
-              <div class="phone">
-                <i class="bi bi-phone"></i>
-                <h4>Call:</h4>
-                <p>+62 813-5875-0022</p>
-              </div>
-
-            </div>
-
-          </div>
-
-          <div class="col-lg-8 mt-5 mt-lg-0" data-aos="fade-left" data-aos-delay="200">
-
-            <form action="forms/contact.php" method="post" role="form" class="php-email-form">
-              <div class="row">
-                <div class="col-md-6 form-group">
-                  <input type="text" name="name" class="form-control" id="name" placeholder="Your Name" required>
-                </div>
-                <div class="col-md-6 form-group mt-3 mt-md-0">
-                  <input type="email" class="form-control" name="email" id="email" placeholder="Your Email" required>
-                </div>
-              </div>
-              <div class="form-group mt-3">
-                <input type="text" class="form-control" name="subject" id="subject" placeholder="Subject" required>
-              </div>
-              <div class="form-group mt-3">
-                <textarea class="form-control" name="message" rows="5" placeholder="Message" required></textarea>
-              </div>
-              <div class="my-3">
-                <div class="loading">Loading</div>
-                <div class="error-message"></div>
-                <div class="sent-message">Your message has been sent. Thank you!</div>
-              </div>
-              <div class="text-center"><button type="submit">Send Message</button></div>
-            </form>
-
-          </div>
-
-        </div>
-
+        <div class="col">
+        <span><iframe src="https://sslecal2.investing.com?columns=exc_flags,exc_currency,exc_importance,exc_actual,exc_forecast,exc_previous&features=datepicker,timezone&countries=5,25,37,45,39,14,48,4,10,35,17,6,11,42,44,22,43,36,26,12,46,41,178,72&calType=week&timeZone=27&lang=54" width="650" height="467" frameborder="0" allowtransparency="true" marginwidth="0" marginheight="0" style="border-radius: 10px; display:flex; margin-left: 40px;"></iframe><div class="poweredBy" style="font-family: Arial, Helvetica, sans-serif;"><span style="font-size: 11px;color: #000000;text-decoration: none;">Kalender Ekonomi Real Time dipersembahkan oleh <a href="https://id.investing.com" rel="nofollow" target="_blank" style="font-size: 11px;color: #000000; font-weight: bold;" class="underline_link">Investing.com Indonesia</a>.</span></div></span>
       </div>
-    </section><!-- End Contact Section -->
+        <div class="col">
+        <iframe src="https://id.widgets.investing.com/live-currency-cross-rates?theme=lightTheme" width="100%" height="100%" frameborder="0" allowtransparency="true" marginwidth="0" marginheight="0" style="margin-right: 20px"></iframe><div class="poweredBy" style="font-family: Arial, Helvetica, sans-serif;"></div>
+        </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section> --}}
+<!-- /pricing -->
 
-  </main><!-- End #main -->
-  @endsection
+<!-- client logo slider -->
+<section class="section">
+  <div class="container">
+      <div class="client-logo-slider align-self-center">
+          <a href="https://www.aspebtindo.org/anggota/daftar-anggota?tipe=&search=rifan" class="text-center d-block outline-0 p-5"><img class="d-unset img-fluid" src="/assets-index/images/clients-logo/aspebtindo.png" alt="client-logo" style="width: 50px"></a>
+          <a href="https://bappebti.go.id/pialang_berjangka/detail/012" class="text-center d-block outline-0 p-5"><img class="d-unset img-fluid" src="/assets-index/images/clients-logo/kemendag.png" alt="client-logo"></a>
+          <a href="https://www.jfx.co.id/media?hal=daftar-pelaku&data=Pialang" class="text-center d-block outline-0 p-5"><img class="d-unset img-fluid" src="/assets-index/images/clients-logo/jfx.png" alt="client-logo"></a>
+          <a href="https://www.ptkbi.com/index.php/c_kbi_wppue_01_anggota_mitra#PL" class="text-center d-block outline-0 p-5"><img class="d-unset img-fluid" src="/assets-index/images/clients-logo/kbi.png" alt="client-logo"></a>
+          <a href="https://www.aspebtindo.org/anggota/daftar-anggota?tipe=&search=rifan" class="text-center d-block outline-0 p-5"><img class="d-unset img-fluid" src="/assets-index/images/clients-logo/aspebtindo.png" alt="client-logo" style="width: 50px"></a>
+          <a href="https://bappebti.go.id/pialang_berjangka/detail/012" class="text-center d-block outline-0 p-5"><img class="d-unset img-fluid" src="/assets-index/images/clients-logo/kemendag.png" alt="client-logo"></a>
+          <a href="https://www.jfx.co.id/media?hal=daftar-pelaku&data=Pialang" class="text-center d-block outline-0 p-5"><img class="d-unset img-fluid" src="/assets-index/images/clients-logo/jfx.png" alt="client-logo"></a>
+          <a href="https://www.ptkbi.com/index.php/c_kbi_wppue_01_anggota_mitra#PL" class="text-center d-block outline-0 p-5"><img class="d-unset img-fluid" src="/assets-index/images/clients-logo/kbi.png" alt="client-logo"></a>
+          
+      </div>
+  </div>
+</section>
+<!-- /client logo slider -->
+
+{{-- <!-- newsletter -->
+<section class="newsletter">
+  <div class="container">
+    <div class="row">
+      <div class="col-lg-12 text-center">
+        <h2>Subscribe to our newsletter</h2>
+        <p class="mb-5">Receive updates, news and deals</p>
+      </div>
+      <div class="col-lg-8 col-sm-10 col-12 mx-auto">
+        <form action="#">
+          <div class="input-wrapper position-relative">
+            <input type="email" class="newsletter-form" id="newsletter" placeholder="Enter your email">
+            <button type="submit" value="send" class="btn newsletter-btn">subscribe</button>
+          </div>
+        </form>
+      </div>
+    </div>
+  </div> --}}
+  <!-- background shapes -->
+  <img class="newsletter-bg-shape left-right-animation" src="/assets-index/images/background-shape/seo-ball-2.png" alt="background-shape">
+</section>
+<!-- /newsletter -->
+@endsection

@@ -34,6 +34,54 @@
       <p style="padding-left: 60px;"><span style="color: #000000;"></span></p>
       <p><span style="font-family: 'Open Sans',sans-serif; font-size: 10pt; color: #000000;">Catatan:</span></p>
       <p style="padding-left: 60px;"><span style="font-family: 'Open Sans',sans-serif; font-size: 10pt; color: #000000;"><strong>BAPPEBTI </strong>( Badan Pengawas Perdagangan Berjangka Komoditi )</span></p>	</div>
+ 
+      <!-- ======= Gallery Section ======= -->
+    <section id="" class="gallery">
+      <div class="container">
+
+        {{-- <div class="section-title" data-aos="fade-up">
+          <h2>Corporate Value</h2>
+          <p>Nilai Luhur Kami</p>
+        </div> --}}
+
+        <div class="row g-0" data-aos="fade-left">
+
+          <div class="col-lg-3 col-md-4">
+            <div class="gallery-item" data-aos="zoom-in" data-aos-delay="100">
+              <a href="/asset-home/img/legalitas-1.jpg" class="gallery-lightbox">
+                <img src="/asset-home/img/legalitas-1.jpg" alt="" class="img-fluid">
+              </a>
+            </div>
+          </div>
+
+          <div class="col-lg-3 col-md-4">
+            <div class="gallery-item" data-aos="zoom-in" data-aos-delay="150">
+              <a href="/asset-home/img/legalitas-2.jpg" class="gallery-lightbox" >
+                <img src="/asset-home/img/legalitas-2.jpg" alt="" class="img-fluid">
+              </a>
+            </div>
+          </div>
+
+          <div class="col-lg-3 col-md-4">
+            <div class="gallery-item" data-aos="zoom-in" data-aos-delay="200">
+              <a href="/asset-home/img/legalitas-3.jpg" class="gallery-lightbox">
+                <img src="/asset-home/img/legalitas-3.jpg" alt="" class="img-fluid">
+              </a>
+            </div>
+          </div>
+
+          <div class="col-lg-3 col-md-4">
+            <div class="gallery-item" data-aos="zoom-in" data-aos-delay="250">
+              <a href="/asset-home/img/legalitas-4.jpg" class="gallery-lightbox">
+                <img src="/asset-home/img/legalitas-4.jpg" alt="" class="img-fluid">
+              </a>
+            </div>
+          </div>
+
+        </div>
+
+      </div>
+    </section><!-- End Gallery Section -->
       </div>
     </section>
 

@@ -45,10 +45,17 @@
         <div class="mb-3">
             <input type="hidden" class="form-control" id="slug" aria-describedby="id" name="slug" value="" readonly>
           </div>
+
+          
           <div class="mb-3">
             <label for="team" class="form-label">Team</label>
             <input type="text" class="form-control" id="team" aria-describedby="id" name="team" value="{{auth()->user()->team->nama_team}}" readonly>
           </div>
+
+          <div class="mb-3">
+            <input type="hidden" class="form-control" id="divisi_id" aria-describedby="id" name="divisi_id" value="{{auth()->user()->divisi_id}}" readonly>
+          </div>
+
           <div class="mb-3">
             <label for="manager" class="form-label">Manager</label>
             <input type="text" class="form-control @error('manager') is-invalid @enderror" id="manager" aria-describedby="id" name="manager" value="{{auth()->user()->team->manager}}" readonly>
@@ -126,7 +133,6 @@
             dataType:'json',
             success: function(data)
             {
-              console.log(data);
               $('#sesi').val(data.nama_sesi);
               $('#jam').val(data.jam_sesi);
               

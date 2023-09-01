@@ -17,8 +17,9 @@ class DashboardAppController extends Controller
     public function index()
     {
         return view('dashboard.app.index', [
-            'appointments' => Appointment::where('team_id', auth()->user()->team->id)->get(),
-            'superapp'=>Appointment::all(),
+            'appointments' => Appointment::where('team_id', auth()->user()->team->id)->latest()->get(),
+            'superapp'=>Appointment::latest()->get(),
+            'divisiapp' => Appointment::where('divisi_id', auth()->user()->team->divisi_id)->latest()->get(),
             
         ]);
     }
@@ -54,6 +55,7 @@ class DashboardAppController extends Controller
             'kendaraan' => 'required',
             'nama' => 'required',
             'slug' => 'required',
+            'divisi_id' => 'required'
 
 
         ]);
@@ -109,7 +111,9 @@ class DashboardAppController extends Controller
             'tujuan' => 'required',
             'kendaraan' => 'required',
             'nama' => 'required',
-            'driver_id' => 'required'
+            'driver_id' => 'required',
+            'hasil' => 'required',
+            'status_bas'=> 'required'
         ];
 
         if($request->slug != $appointment->slug)

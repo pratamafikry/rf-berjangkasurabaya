@@ -54,6 +54,10 @@ class User extends Authenticatable
     {
         return $this->belongsTo(Team::class);
     }
+    public function divisi()
+    {
+        return $this->belongsTo(Divisi::class);
+    }
 
     public function getRouteKeyName()
     {

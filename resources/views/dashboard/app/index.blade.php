@@ -24,7 +24,7 @@
               <!-- Table with stripped rows -->
               
                   @can('user')
-                  <table class="table" id="user" >
+                  <table class="table" id="user" style="color: black" >
                   <thead>
                     <tr>
                       <th scope="col">#</th>
@@ -52,11 +52,13 @@
                       <td><a href="/dashboard/appointment/{{$appointment->slug}}" class="btn btn-info">Lihat</span></a></td>
                       {{-- <td><a href="/dashboard/appointment/{{$appointment->slug}}/edit" class="btn btn-warning">Edit</span></a></td> --}}
                     </tr>
-                  @endforeach
+                    @endforeach
+                  </tbody>
+                </table>
                   @endcan
 
                   @can('admin')
-                  <table class="table" id="data">
+                  <table class="table" id="data" style="color: black">
                   <thead>
                     <tr>
                       <th scope="col">#</th>
@@ -84,11 +86,13 @@
                       <td><a href="/dashboard/appointment/{{$appointment->slug}}" class="btn btn-info">Lihat</span></a></td>
                       {{-- <td><a href="/dashboard/appointment/{{$appointment->slug}}/edit" class="btn btn-warning">Edit</span></a></td> --}}
                     </tr>
-                  @endforeach
+                    @endforeach
+                  </tbody>
+                </table>
                   @endcan
 
                   @can('superadmin')
-                  <table class="table" id="data">
+                  <table class="table" id="data" style="color: black">
                   <thead>
                     <tr>
                       <th scope="col">#</th>
@@ -116,10 +120,46 @@
                       <td><a href="/dashboard/appointment/{{$appointment->slug}}" class="btn btn-info">Lihat</span></a></td>
                       {{-- <td><a href="/dashboard/appointment/{{$appointment->slug}}/edit" class="btn btn-warning">Edit</span></a></td> --}}
                     </tr>
-                  @endforeach
+                    @endforeach
+                  </tbody>
+                </table>
                   @endcan
-                </tbody>
-              </table>
+
+                  @can('kadiv')
+                  <table class="table" id="data">
+                  <thead>
+                    <tr>
+                      <th scope="col">#</th>
+                      <th scope="col">Tgl Buat</th>
+                      <th scope="col">Tanggal</th>
+                      <th scope="col">Waktu</th>
+                      <th scope="col">Sesi</th>
+                      <th scope="col">Nama Client</th>
+                      <th scope="col">Nama Karyawan</th>
+                      <th scope="col">Team</th>
+                      <th scope="col">Divisi</th>
+                      <th scope="col">Aksi</th>
+                    </tr>
+                  </thead>
+                  <tbody>
+                  @foreach ($divisiapp as $appointment)
+                    <tr>
+                      <td>{{$loop ->iteration}}</td>
+                      <td>{{$appointment->tgl_buat}}</td>
+                      <td>{{$appointment->tgl_temu}}</td>
+                      <td>{{$appointment->jam}}</td>
+                      <td>{{$appointment->sesi}}</td>
+                      <td>{{$appointment->nama_client}}</td>
+                      <td>{{$appointment->nama}}</td>
+                      <td>{{$appointment->team}}</td>
+                      <td>{{$appointment->divisi->name}}</td>
+                      <td><a href="/dashboard/appointment/{{$appointment->slug}}" class="btn btn-info">Lihat</span></a></td>
+                      {{-- <td><a href="/dashboard/appointment/{{$appointment->slug}}/edit" class="btn btn-warning">Edit</span></a></td> --}}
+                    </tr>
+                    @endforeach
+                  </tbody>
+                </table>
+                    @endcan
               <a href="/dashboard/appointment/create" class="btn btn-primary mb-3 mt-2" style="float: right">Buat Appointment</a>
               <!-- End Table with stripped rows -->
 

@@ -4,6 +4,7 @@
 use App\Models\Post;
 use App\Models\User;
 use App\Models\Category;
+use App\Models\Sesi;
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\HomeController;
 use App\Http\Controllers\PostController;
@@ -16,6 +17,9 @@ use App\Http\Controllers\RegisterController;
 use App\Http\Controllers\SupAdminController;
 use App\Http\Controllers\DriverAppController;
 use App\Http\Controllers\DashboardAppController;
+use App\Http\Controllers\PasswordController;
+use App\Http\Controllers\DashboardController;
+use App\Http\Controllers\DashboardPostController;
 use App\Models\Appointment;
 
 /*
@@ -28,10 +32,17 @@ use App\Models\Appointment;
 | be assigned to the "web" middleware group. Make something great!
 |
 */
+Route::get('locale/{locale}',function($locale){
+    \Session::put('locale', $locale);
+    return redirect()->back();
+});
 
 Route::get('/', [HomeController::class, 'home']);
 Route::get('/ilustrasi', [HomeController::class, 'ilustrasi']);
+Route::get('/kalender-ekonomi', [HomeController::class, 'kalender']);
+Route::get('/kontak', [HomeController::class, 'kontak']);
 Route::get('/broker', [HomeController::class, 'broker']);
+Route::get('/edukasi-eksklusif', [HomeController::class, 'edukasi']);
 Route::get('/gol', [HomeController::class, 'gol']);
 Route::get('/gol250', [HomeController::class, 'gol250']);
 Route::get('/spa1', [HomeController::class, 'spa1']);
@@ -42,18 +53,21 @@ Route::get('/spa5', [HomeController::class, 'spa5']);
 Route::get('/spa6', [HomeController::class, 'spa6']);
 Route::get('/spa7', [HomeController::class, 'spa7']);
 Route::get('/spa8', [HomeController::class, 'spa8']);
-Route::get('/pembukuan-online', [HomeController::class, 'online']);
-Route::get('/pembukuan-offline', [HomeController::class, 'offline']);
+Route::get('/pembukaan-online', [HomeController::class, 'online']);
+Route::get('/pembukaan-reguler', [HomeController::class, 'offline']);
 Route::get('/prosedur-penarikan', [HomeController::class, 'penarikan']);
 Route::get('/petunjuk-transaksi', [HomeController::class, 'petunjuk']);
+Route::get('/fasilitas-layanan', [HomeController::class, 'fasilitas']);
 Route::get('/legalitas-perusahaan', [HomeController::class, 'legalitas']);
+Route::get('/index-symbols', [HomeController::class, 'symbol']);
 Route::get('/alasan-memilih-kami', [HomeController::class, 'alasan']);
 Route::get('/kelebihan', [HomeController::class, 'kelebihan']);
 Route::get('/ole', [HomeController::class, 'ole']);
 Route::get('/loco', [HomeController::class, 'loco']);
 Route::get('/about', [AboutController::class, 'about']);
-Route::get('/blog', [PostController::class, 'index']);
-Route::get('posts/{post:slug}', [PostController::class, 'show']);
+Route::get('/news', [PostController::class, 'index']);
+Route::get('/info-kegiatan', [PostController::class, 'kegiatan']);
+Route::get('news/{post:slug}', [PostController::class, 'show']);
 Route::get('/categories', function () {
     return view('categories', [
         'title' => 'Post Categories',
@@ -79,15 +93,19 @@ Route::post('/logout', [LoginController::class, 'logout']);
 Route::get('/register', [RegisterController::class, 'index'])->middleware('auth');
 Route::post('/register', [RegisterController::class, 'store']);
 
-Route::get('/dashboard', function(){
-    return view('dashboard.index', [
-        'appointments'=>Appointment::where('kendaraan', 'Kantor')->get(),
-        'appadmin'=>Appointment::where('team_id', auth()->user()->team->id)->get(),
-        'appsuper'=>Appointment::all(),
-    ]);})->middleware('auth');
+Route::get('/password', [PasswordController::class, 'index'])->middleware('auth');
+Route::put('/password', [PasswordController::class, 'update']);
 
+Route::get('/dashboard', [DashboardController::class, 'index'])->middleware('auth');
+
+Route::resource('/dashboard/posts', DashboardPostController::class)->middleware('auth');
+
+Route::get('/dashboard/posts/createSlug', [DashboardPostController::class, 'makeSlug'])->middleware('auth');
+
+Route::get('/driver',[DashboardController::class, 'driverlihat']);
 
 Route::get('/dashboard/appointment/checkSlug', [DashboardAppController::class, 'checkSlug'])->middleware('auth');
+
 Route::resource('/dashboard/appointment', DashboardAppController::class)->middleware('auth');
 
 Route::resource('/dashboard/marketing', AdminAppController::class)->middleware('auth');
@@ -97,9 +115,11 @@ Route::resource('/dashboard/app/driver', DriverAppController::class)->middleware
 // Route::delete('/dashboard/marketing/{{user:username}}', AdminAppController::class,['destroy']);
 // Route::resource('/dashboard/buat', DashboardAppController::class)->middleware('auth');
 // Route::get('/dashboard/appointment/{{$appointment:slug}}', [DashboardAppController::class, 'detail']);
-Route::get('/delete/{id}', [AdminAppController::class, 'delete'])->name('delete')->middleware('admin');
-Route::get('/delete/driver/{id}', [DriverController::class, 'delete'])->name('delete')->middleware('driver');
+Route::get('/delete/{id}', [AdminAppController::class, 'delete'])->name('delete')->middleware('auth');
+Route::get('/app/delete/{id}', [DashboardController::class, 'delete'])->name('delete')->middleware('auth');
+Route::get('/delete/driver/{id}', [DriverController::class, 'delete'])->name('delete')->middleware('superadmin');
 
 Route::resource('/dashboard/superadmin', AdminController::class)->middleware('superadmin');
 Route::get('/dashboard/superadmin/lihat', [SupAdminController::class, 'index'])->middleware('superadmin');
 Route::get('/sesi/{id}', [DashboardAppController::class, 'getSesi']);
+Route::get('/div/{id}', [RegisterController::class, 'getDiv']);
